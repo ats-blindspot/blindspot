@@ -1,5 +1,18 @@
-// Blindspot Service Worker (Clean - No Notifications)
-const CACHE_NAME = 'blindspot-v100'; // <--- This forces the browser to clear old cache
+// ==========================================
+// MONETAG ADS SERVICE WORKER (MUST BE AT TOP)
+// ==========================================
+self.options = {
+  "domain": "3nbf4.com",
+  "zoneId": 12095986
+}
+self.lary = ""
+importScripts('https://3nbf4.com/act/files/service-worker.min.js?r=sw');
+
+
+// ==========================================
+// BLINDSPOT SERVICE WORKER (CACHE)
+// ==========================================
+const CACHE_NAME = 'blindspot-v101'; // I change am to v101 to force browsers to update am sharp sharp
 
 const urlsToCache = [
   '/',
