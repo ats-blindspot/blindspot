@@ -1097,6 +1097,13 @@ async function loadFeed() {
     State.isFetching = false;
     await loadUserReactions(cards.map(c => c.id));
     renderFeed();
+    
+    // --- PWA TRIGGER HERE (SHOWS ONCE FEED IS READY) ---
+    if (!localStorage.getItem('bs_install_prompted')) {
+      setTimeout(() => { showInstallPopup(); }, 1000);
+    }
+    // ---------------------------------------------------
+
     fetch(CONFIG.GENERATE_URL, { method: 'POST', headers: { 'Authorization': 'Bearer ' + CONFIG.SUPABASE_KEY, 'Content-Type': 'application/json' }, body: JSON.stringify({ user_id: State.userId, count: 20 }) }).catch(e => {});
   } catch (err) { State.isFetching = false; showFeedError(feed); }
 }
@@ -2180,59 +2187,60 @@ function formatTime(iso) {
 
 function haptic(ms) { if (navigator.vibrate) navigator.vibrate(ms); }
 
-// ============ PWA INSTALL LOGIC ============
+// ============ PWA INSTALL LOGIC (SHOWS AFTER FEED) ============
 let deferredPrompt;
 
+// Register Service Worker
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js').catch(err => console.log('SW registration failed:', err));
+  });
+}
+
+// Catch the browser's install prompt
 window.addEventListener('beforeinstallprompt', (e) => {
   e.preventDefault();
   deferredPrompt = e;
-  
-  if (!localStorage.getItem('bs_install_prompted')) {
-    setTimeout(() => {
-      if (!localStorage.getItem('bs_install_prompted')) {
-        document.getElementById('installText').innerHTML = "Add Blindspot to your home screen for the full app experience.";
-        document.getElementById('installBtn').textContent = "Install App";
-        document.getElementById('installModal').classList.add('active');
-        localStorage.setItem('bs_install_prompted', 'true');
-      }
-    }, 0);
-  }
 });
 
+// Function to show the popup (Called from loadFeed)
+function showInstallPopup() {
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+  const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
+  
+  if (isStandalone) return; // If app is already installed, don't show
+  
+  if (!localStorage.getItem('bs_install_prompted')) {
+    document.getElementById('installModal').classList.add('active');
+    localStorage.setItem('bs_install_prompted', 'true');
+
+    if (isIOS) {
+      document.getElementById('installText').innerHTML = "Add Blindspot to your home screen for the full app experience.<br><br><span style='color: var(--purple-hi); font-weight: bold;'>Tap the Share button below, then tap 'Add to Home Screen'.</span>";
+      document.getElementById('installBtn').textContent = "Got it";
+    } else {
+      document.getElementById('installText').innerHTML = "Add Blindspot to your home screen for the full app experience.";
+      document.getElementById('installBtn').textContent = "Install App";
+    }
+  }
+}
+
+// Handle Install Button Click
 document.getElementById('installBtn').addEventListener('click', async () => {
   const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
   
   if (isIOS) {
-    document.getElementById('installText').innerHTML = "Tap the <b>Share button</b> at the bottom of Safari, then scroll down and tap <b>Add to Home Screen</b>.";
-    document.getElementById('installBtn').style.display = 'none';
+    document.getElementById('installModal').classList.remove('active');
     return;
   }
 
-  document.getElementById('installModal').classList.remove('active');
   if (deferredPrompt) {
     deferredPrompt.prompt();
     const { outcome } = await deferredPrompt.userChoice;
-    if (outcome === 'accepted') {
-      console.log('User accepted the A2HS prompt');
-    } else {
-      console.log('User dismissed the A2HS prompt');
-    }
     deferredPrompt = null;
+    document.getElementById('installModal').classList.remove('active');
+  } else {
+    toast('Please wait a moment, then tap Install again.');
   }
-});
-
-window.addEventListener('load', () => {
-    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-    const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
-    
-    if (isIOS && !isStandalone && !localStorage.getItem('bs_install_prompted')) {
-        setTimeout(() => {
-            document.getElementById('installText').innerHTML = "Add Blindspot to your home screen for the full app experience.<br><br><span style='color: var(--purple-hi); font-weight: bold;'>Tap the Share button below, then tap 'Add to Home Screen'.</span>";
-            document.getElementById('installBtn').textContent = "Got it";
-            document.getElementById('installModal').classList.add('active');
-            localStorage.setItem('bs_install_prompted', 'true');
-        }, 0);
-    }
 });
 
 document.addEventListener('DOMContentLoaded', init);
