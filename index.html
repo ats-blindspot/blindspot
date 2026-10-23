@@ -10,13 +10,10 @@
 <meta name="description" content="Everyone sees your blindspots. Except you." />
 <title>Blindspot</title>
 
-<!-- MONETAG META TAG -->
-<meta name="monetag" content="02d423da723ce2af11ed51a4a7de5f80">
-
-<link rel="manifest" href="/manifest.json" />
-<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
-<link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png" />
-<link rel="apple-touch-icon" href="/icon-192.png" />
+<link rel="manifest" href="./manifest.json" />
+<link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png" />
+<link rel="icon" type="image/png" sizes="512x512" href="./icon-512.png" />
+<link rel="apple-touch-icon" href="./icon-192.png" />
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
@@ -251,7 +248,7 @@
   .avatar { width: 88px; height: 88px; border-radius: 50%; background: linear-gradient(135deg, var(--purple), var(--purple-deep)); display: flex; align-items: center; justify-content: center; box-shadow: 0 0 30px rgba(157,78,221,0.6), inset 0 2px 0 rgba(199,125,255,0.3); margin-bottom: 8px; }
   .avatar svg { width: 44px; height: 44px; color: #fff; }
   .profile-name { font-size: 20px; font-weight: 800; }
-  .profile-country { font-size: 15px; color: var(--grey); }
+  .profile-country { font-size: 15px; color: var(--grey); display: none; } /* Country removed */
   .profile-title { display: none; margin-top: 6px; font-size: 13px; color: var(--purple-hi); font-weight: 700; }
   .stats-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; padding: 0 16px 16px; }
   .stat-box { background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 16px 8px; text-align: center; box-shadow: inset 0 1px 0 rgba(199,125,255,0.08); }
@@ -440,8 +437,8 @@
   .nav-item.create-tab .create-circle svg { width: 22px; height: 22px; color: #fff; }
   .nav-item.create-tab .n-label { color: var(--purple-hi); }
 </style>
-</head>
-<body>
+ </head>
+ <body>
 <div class="app" id="app">
 
   <!-- SPLASH -->
@@ -685,7 +682,7 @@
       <div class="profile-top">
         <div class="avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
         <div class="profile-name" id="profileName">User</div>
-        <div class="profile-country" id="profileCountry">🌍 Detecting...</div>
+        <!-- Country removed -->
         <div class="profile-title" id="profileTitle"></div>
       </div>
       <div class="stats-row">
@@ -707,7 +704,7 @@
   </section>
 
   <!-- PRIVACY, TERMS, ABOUT -->
-  <section id="privacy" class="screen"><div class="content-head"><div class="content-back" onclick="switchTab('profile')">←</div><div class="content-head-title">Privacy Policy</div></div><div class="scrollable"><div class="content-body"><p><strong>Last updated:</strong> <span id="privacyDate"></span></p><h2>1. What We Collect</h2><p>When you use Blindspot, we collect:</p><ul><li><strong>Device ID</strong> — a unique anonymous identifier for your device</li><li><strong>Gender</strong> — to personalize your feed</li><li><strong>Category preferences</strong> — the 3 interests you pick</li><li><strong>Country</strong> — detected automatically from your IP</li><li><strong>Reactions</strong> — which cards you react to or save</li><li><strong>View history</strong> — which cards you've seen</li></ul><h2>2. How We Use It</h2><p>We use your data only to:</p><ul><li>Personalize your feed with cards you'll enjoy</li><li>Send you daily curiosity notifications</li><li>Improve the app experience</li></ul><p>We never sell your data. Ever.</p><h2>3. Technology Stack</h2><p>Blindspot uses Blindspot proprietary technology to work, including:</p><ul><li><strong>Secure database storage</strong> for your data</li><li><strong>Advanced technology</strong> for card generation</li><li><strong>Fact-checking services</strong> for accuracy</li><li><strong>Advertising partners</strong> for rewarded ads</li></ul><p>Each has its own privacy policy.</p><h2>4. Your Rights</h2><p>You can:</p><ul><li>Delete all your data anytime via "Logout"</li><li>Turn off notifications in settings</li><li>Uninstall the app to stop all data collection</li></ul><h2>5. Contact</h2><p>Questions? Email us at <strong>privacy@blindspot.app</strong></p></div></div></section>
+  <section id="privacy" class="screen"><div class="content-head"><div class="content-back" onclick="switchTab('profile')">←</div><div class="content-head-title">Privacy Policy</div></div><div class="scrollable"><div class="content-body"><p><strong>Last updated:</strong> <span id="privacyDate"></span></p><h2>1. What We Collect</h2><p>When you use Blindspot, we collect:</p><ul><li><strong>Device ID</strong> — a unique anonymous identifier for your device</li><li><strong>Gender</strong> — to personalize your feed</li><li><strong>Category preferences</strong> — the 3 interests you pick</li><li><strong>Reactions</strong> — which cards you react to or save</li><li><strong>View history</strong> — which cards you've seen</li></ul><h2>2. How We Use It</h2><p>We use your data only to:</p><ul><li>Personalize your feed with cards you'll enjoy</li><li>Send you daily curiosity notifications</li><li>Improve the app experience</li></ul><p>We never sell your data. Ever.</p><h2>3. Technology Stack</h2><p>Blindspot uses Blindspot proprietary technology to work, including:</p><ul><li><strong>Secure database storage</strong> for your data</li><li><strong>Advanced technology</strong> for card generation</li><li><strong>Fact-checking services</strong> for accuracy</li><li><strong>Advertising partners</strong> for rewarded ads</li></ul><p>Each has its own privacy policy.</p><h2>4. Your Rights</h2><p>You can:</p><ul><li>Delete all your data anytime via "Logout"</li><li>Turn off notifications in settings</li><li>Uninstall the app to stop all data collection</li></ul><h2>5. Contact</h2><p>Questions? Email us at <strong>privacy@blindspot.app</strong></p></div></div></section>
 
   <section id="terms" class="screen"><div class="content-head"><div class="content-back" onclick="switchTab('profile')">←</div><div class="content-head-title">Terms of Service</div></div><div class="scrollable"><div class="content-body"><p><strong>Last updated:</strong> <span id="termsDate"></span></p><h2>1. Acceptance</h2><p>By using Blindspot, you agree to these terms.</p><h2>2. What Blindspot Is</h2><p>Blindspot is a curiosity app. We generate cards that challenge common beliefs.</p><h2>3. Content Disclaimer</h2><p><strong>Important:</strong> Cards are generated by Blindspot's advanced technology with integrated fact-checking. While we try hard for accuracy:</p><ul><li>We don't guarantee every fact is 100% correct</li><li>Cards are for curiosity and entertainment</li><li>Don't make major life decisions based solely on them</li></ul><h2>4. Your Responsibilities</h2><p>You agree to:</p><ul><li>Not abuse, scrape, or reverse-engineer the app</li><li>Not share illegal content</li><li>Use the app for personal, non-commercial purposes</li></ul><h2>5. Contact</h2><p>Questions? Email <strong>legal@blindspot.app</strong></p></div></div></section>
 
@@ -873,7 +870,7 @@ const CATEGORIES = [
 ];
 
 const State = {
-  userId: null, pickedCats: [], saved: [], seen: 0, blown: 0, country: null, flag: null,
+  userId: null, pickedCats: [], saved: [], seen: 0, blown: 0,
   gender: null, genderPicked: false,
   currentFeedIdx: 0, cards: [], previousCards: [], currentCard: null, currentLayerIdx: 0,
   unlockedCards: JSON.parse(localStorage.getItem('bs_unlocked') || '[]'),
@@ -894,8 +891,6 @@ async function init() {
   State.saved = JSON.parse(localStorage.getItem('bs_saved') || '[]');
   State.seen = parseInt(localStorage.getItem('bs_seen') || '0');
   State.blown = parseInt(localStorage.getItem('bs_blown') || '0');
-  State.country = localStorage.getItem('bs_country');
-  State.flag = localStorage.getItem('bs_flag');
   State.gender = localStorage.getItem('bs_gender');
   State.genderPicked = !!State.gender;
   
@@ -911,12 +906,12 @@ async function init() {
     });
     localStorage.setItem('bs_user_id', State.userId);
   }
-  if (!State.country) detectCountry(); else updateProfileCountry();
+  
   setTimeout(async () => {
     try {
       const { data: existing } = await sb.from('user_preferences').select('user_id').eq('user_id', State.userId).maybeSingle();
       if (!existing) {
-        await sb.from('user_preferences').insert({ user_id: State.userId, categories: State.pickedCats.length > 0 ? State.pickedCats : ['all'], country: State.country || 'Unknown', flag: State.flag || '🌍', gender: State.gender || null });
+        await sb.from('user_preferences').insert({ user_id: State.userId, categories: State.pickedCats.length > 0 ? State.pickedCats : ['all'], gender: State.gender || null });
       }
     } catch (e) {}
   }, 2000);
@@ -942,33 +937,6 @@ async function init() {
   const termsDate = document.getElementById('termsDate');
   if (privDate) privDate.textContent = today;
   if (termsDate) termsDate.textContent = today;
-}
-
-async function detectCountry() {
-  const cachedCountry = localStorage.getItem('bs_country');
-  const cachedFlag = localStorage.getItem('bs_flag');
-  if (cachedCountry && cachedFlag && cachedCountry !== 'Unknown') {
-    State.country = cachedCountry; State.flag = cachedFlag;
-    updateProfileCountry(); return;
-  }
-  try {
-    const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 3000);
-    const res = await fetch('https://ipapi.co/json/', { signal: controller.signal });
-    clearTimeout(timeout);
-    const data = await res.json();
-    State.country = data.country_name || 'Unknown';
-    const code = (data.country_code || 'US').toUpperCase();
-    State.flag = code.replace(/./g, c => String.fromCodePoint(127397 + c.charCodeAt()));
-  } catch (err) { State.country = 'Unknown'; State.flag = '🌍'; }
-  localStorage.setItem('bs_country', State.country);
-  localStorage.setItem('bs_flag', State.flag);
-  updateProfileCountry();
-}
-
-function updateProfileCountry() {
-  const el = document.getElementById('profileCountry');
-  if (el && State.country) el.textContent = (State.flag || '🌍') + ' ' + State.country;
 }
 
 function go(screenId) {
@@ -1009,9 +977,7 @@ async function confirmGender() {
     await sb.from('user_preferences').upsert({
       user_id: State.userId,
       gender: State.gender,
-      categories: State.pickedCats.length > 0 ? State.pickedCats : ['all'],
-      country: State.country,
-      flag: State.flag
+      categories: State.pickedCats.length > 0 ? State.pickedCats : ['all']
     }, { onConflict: 'user_id' });
   } catch (err) { console.log('Gender save error:', err); }
   if (!localStorage.getItem('bs_welcome_seen')) {
@@ -1958,7 +1924,6 @@ function renderProfile() {
   document.getElementById('statSeen').textContent = State.seen;
   document.getElementById('statBlown').textContent = State.blown;
   document.getElementById('statSaved').textContent = State.saved.length;
-  updateProfileCountry();
 }
 
 function showLogoutConfirm() { document.getElementById('logoutModal').classList.add('active'); haptic(20); }
@@ -2092,7 +2057,7 @@ function wireEvents() {
   document.getElementById('welcomeContinue').onclick = confirmWelcome;
   document.getElementById('catBtn').onclick = async () => {
     localStorage.setItem('bs_cats', JSON.stringify(State.pickedCats)); haptic(20);
-    try { await sb.from('user_preferences').upsert({ user_id: State.userId, categories: State.pickedCats, gender: State.gender, country: State.country, flag: State.flag }); } catch (err) {}
+    try { await sb.from('user_preferences').upsert({ user_id: State.userId, categories: State.pickedCats, gender: State.gender }); } catch (err) {}
     fetch(CONFIG.GENERATE_URL, { method: 'POST', headers: { 'Authorization': 'Bearer ' + CONFIG.SUPABASE_KEY, 'Content-Type': 'application/json' }, body: JSON.stringify({ user_id: State.userId, count: 10 }) }).catch(e => {});
     document.getElementById('bottomNav').classList.remove('hidden'); 
     go('feed'); loadFeed(); startHeartbeat();
@@ -2100,7 +2065,7 @@ function wireEvents() {
   document.getElementById('catSkipBtn').onclick = async () => {
     haptic(20); State.pickedCats = ['all'];
     localStorage.setItem('bs_cats', JSON.stringify(['all']));
-    try { await sb.from('user_preferences').upsert({ user_id: State.userId, categories: ['all'], gender: State.gender, country: State.country, flag: State.flag }); } catch (err) {}
+    try { await sb.from('user_preferences').upsert({ user_id: State.userId, categories: ['all'], gender: State.gender }); } catch (err) {}
     fetch(CONFIG.GENERATE_URL, { method: 'POST', headers: { 'Authorization': 'Bearer ' + CONFIG.SUPABASE_KEY, 'Content-Type': 'application/json' }, body: JSON.stringify({ user_id: State.userId, count: 15 }) }).catch(e => {});
     toast('👁 Showing all categories');
     document.getElementById('bottomNav').classList.remove('hidden'); 
@@ -2190,25 +2155,22 @@ function haptic(ms) { if (navigator.vibrate) navigator.vibrate(ms); }
 // ============ PWA INSTALL LOGIC (SHOWS AFTER FEED) ============
 let deferredPrompt;
 
-// Register Service Worker
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js').catch(err => console.log('SW registration failed:', err));
+    navigator.serviceWorker.register('./sw.js').catch(err => console.log('SW registration failed:', err));
   });
 }
 
-// Catch the browser's install prompt
 window.addEventListener('beforeinstallprompt', (e) => {
   e.preventDefault();
   deferredPrompt = e;
 });
 
-// Function to show the popup (Called from loadFeed)
 function showInstallPopup() {
   const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
   const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
   
-  if (isStandalone) return; // If app is already installed, don't show
+  if (isStandalone) return;
   
   if (!localStorage.getItem('bs_install_prompted')) {
     document.getElementById('installModal').classList.add('active');
@@ -2224,7 +2186,6 @@ function showInstallPopup() {
   }
 }
 
-// Handle Install Button Click
 document.getElementById('installBtn').addEventListener('click', async () => {
   const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
   
@@ -2239,7 +2200,8 @@ document.getElementById('installBtn').addEventListener('click', async () => {
     deferredPrompt = null;
     document.getElementById('installModal').classList.remove('active');
   } else {
-    toast('Please wait a moment, then tap Install again.');
+    toast('Tap the 3 dots (⋮) at the top right, then tap "Add to Home screen"');
+    document.getElementById('installModal').classList.remove('active');
   }
 });
 
@@ -2247,4 +2209,4 @@ document.addEventListener('DOMContentLoaded', init);
 </script>
 
 </body>
-</html>
+           </html>
