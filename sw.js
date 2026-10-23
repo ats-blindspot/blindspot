@@ -1,12 +1,10 @@
-// Blindspot Service Worker (Clean - No Monetag)
-const CACHE_NAME = 'blindspot-v106'; 
+const CACHE_NAME = 'blindspot-v108'; 
 
 const urlsToCache = [
-  '/',
-  '/index.html'
+  './',
+  './index.html'
 ];
 
-// Install
 self.addEventListener('install', (event) => {
   self.skipWaiting();
   event.waitUntil(
@@ -18,7 +16,6 @@ self.addEventListener('install', (event) => {
   );
 });
 
-// Activate
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((cacheNames) => {
@@ -33,7 +30,6 @@ self.addEventListener('activate', (event) => {
   );
 });
 
-// Fetch
 self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
   if (event.request.url.includes('supabase.co')) return;
