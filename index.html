@@ -124,27 +124,30 @@
   .feed-bookmark { width: 22px; height: 22px; cursor: pointer; color: #fff; transition: 0.25s; flex-shrink: 0; }
   .feed-bookmark:active { transform: scale(0.85); }
   .feed-bookmark.saved { color: var(--purple-hi); filter: drop-shadow(0 0 12px var(--purple-hi)); }
-  .feed-content-box { background: linear-gradient(180deg, rgba(157,78,221,0.08) 0%, rgba(157,78,221,0.02) 100%); border: 1px solid rgba(157,78,221,0.25); border-radius: 16px; padding: 14px; display: flex; flex-direction: column; gap: 10px; position: relative; z-index: 2; flex-shrink: 0; }
-  .feed-what { font-size: 18px; font-weight: 800; line-height: 1.3; letter-spacing: 0.2px; text-shadow: 0 0 20px rgba(199,125,255,0.15); }
-  .feed-why { font-size: 13px; color: var(--grey); line-height: 1.5; }
-  .feed-layers { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; position: relative; z-index: 2; flex-shrink: 0; }
-  .layer-btn { min-height: 42px; background: linear-gradient(180deg, var(--card2) 0%, #1E1136 100%); border: 1px solid rgba(157,78,221,0.35); border-radius: 12px; display: flex; align-items: center; gap: 6px; padding: 6px 10px; font-size: 10.5px; font-weight: 700; color: #fff; cursor: pointer; transition: 0.25s cubic-bezier(0.34, 1.56, 0.64, 1); position: relative; box-shadow: inset 0 1px 0 rgba(199,125,255,0.08); }
+  .feed-content-box { background: linear-gradient(180deg, rgba(157,78,221,0.08) 0%, rgba(157,78,221,0.02) 100%); border: 1px solid rgba(157,78,221,0.25); border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 12px; position: relative; z-index: 2; flex-shrink: 0; }
+  
+  /* UPDATED TEXT SIZES */
+  .feed-what { font-size: 22px; font-weight: 900; line-height: 1.35; letter-spacing: 0.2px; text-shadow: 0 0 20px rgba(199,125,255,0.2); color: #fff; }
+  .feed-why { font-size: 15px; color: #D0D0D0; font-weight: 600; line-height: 1.6; }
+
+  .feed-layers { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; position: relative; z-index: 2; flex-shrink: 0; }
+  .layer-btn { min-height: 48px; background: linear-gradient(180deg, var(--card2) 0%, #1E1136 100%); border: 1px solid rgba(157,78,221,0.35); border-radius: 12px; display: flex; align-items: center; gap: 8px; padding: 10px 12px; font-size: 13px; font-weight: 800; color: #fff; cursor: pointer; transition: 0.25s cubic-bezier(0.34, 1.56, 0.64, 1); position: relative; box-shadow: inset 0 1px 0 rgba(199,125,255,0.08); }
   .layer-btn:active { transform: scale(0.94); border-color: var(--purple-hi); box-shadow: 0 0 22px rgba(157,78,221,0.9), inset 0 1px 0 rgba(199,125,255,0.3); }
-  .layer-btn .l-icon { color: var(--purple-hi); font-size: 12px; flex-shrink: 0; filter: drop-shadow(0 0 4px var(--purple-hi)); }
-  .layer-btn .l-text { line-height: 1.25; word-wrap: break-word; white-space: normal; flex: 1; }
-  .layer-btn .l-lock { margin-left: auto; font-size: 11px; opacity: 0.6; flex-shrink: 0; }
-  .feed-funny { font-size: 12.5px; color: var(--purple-pale); font-style: italic; line-height: 1.5; position: relative; z-index: 2; padding: 8px 0; border-top: 1px solid rgba(157,78,221,0.15); flex-shrink: 0; }
-  .feed-reactions { display: flex; align-items: center; gap: 14px; font-size: 12px; margin-top: 2px; position: relative; z-index: 2; flex-shrink: 0; padding-top: 8px; border-top: 1px solid rgba(157,78,221,0.15); }
+  .layer-btn .l-icon { color: var(--purple-hi); font-size: 16px; flex-shrink: 0; filter: drop-shadow(0 0 4px var(--purple-hi)); }
+  .layer-btn .l-text { line-height: 1.3; word-wrap: break-word; white-space: normal; flex: 1; }
+  .layer-btn .l-lock { margin-left: auto; font-size: 12px; opacity: 0.6; flex-shrink: 0; }
+  .feed-funny { font-size: 14.5px; color: var(--purple-pale); font-weight: 700; font-style: italic; line-height: 1.5; position: relative; z-index: 2; padding: 10px 0; border-top: 1px solid rgba(157,78,221,0.15); flex-shrink: 0; }
+  .feed-reactions { display: flex; align-items: center; gap: 14px; font-size: 13px; margin-top: 2px; position: relative; z-index: 2; flex-shrink: 0; padding-top: 10px; border-top: 1px solid rgba(157,78,221,0.15); }
   .reaction { display: flex; align-items: center; gap: 4px; cursor: pointer; transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1); padding: 3px 5px; border-radius: 12px; }
   .reaction:active { transform: scale(1.25); }
-  .reaction .r-emoji { font-size: 20px; transition: 0.2s; }
+  .reaction .r-emoji { font-size: 22px; transition: 0.2s; }
   .reaction.active .r-emoji { filter: drop-shadow(0 0 12px var(--purple-hi)); transform: scale(1.1); }
   .reaction.active .r-count { color: var(--purple-hi); font-weight: 800; text-shadow: 0 0 8px var(--purple-hi); }
-  .reaction .r-count { color: var(--grey); font-weight: 600; }
+  .reaction .r-count { color: var(--grey); font-weight: 700; }
   .feed-spacer { flex: 1; }
-  .feed-action { width: 20px; height: 20px; color: var(--grey); cursor: pointer; transition: 0.2s; }
+  .feed-action { width: 22px; height: 22px; color: var(--grey); cursor: pointer; transition: 0.2s; }
   .feed-action:active { transform: scale(0.85); color: var(--purple-hi); }
-  .feed-discovered { display: flex; align-items: center; gap: 6px; font-size: 10px; color: var(--purple-pale); font-weight: 600; letter-spacing: 0.3px; position: relative; z-index: 2; padding: 4px 0; flex-shrink: 0; }
+  .feed-discovered { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--purple-pale); font-weight: 600; letter-spacing: 0.3px; position: relative; z-index: 2; padding: 4px 0; flex-shrink: 0; }
   .feed-discovered .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--purple-hi); box-shadow: 0 0 6px var(--purple-hi); }
   .feed-discovered .creator-title { color: var(--purple-hi); font-weight: 800; }
   .feed-loading { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; flex: 1; color: var(--grey); }
@@ -248,7 +251,7 @@
   .avatar { width: 88px; height: 88px; border-radius: 50%; background: linear-gradient(135deg, var(--purple), var(--purple-deep)); display: flex; align-items: center; justify-content: center; box-shadow: 0 0 30px rgba(157,78,221,0.6), inset 0 2px 0 rgba(199,125,255,0.3); margin-bottom: 8px; }
   .avatar svg { width: 44px; height: 44px; color: #fff; }
   .profile-name { font-size: 20px; font-weight: 800; }
-  .profile-country { font-size: 15px; color: var(--grey); display: none; } /* Country removed */
+  .profile-country { font-size: 15px; color: var(--grey); display: none; }
   .profile-title { display: none; margin-top: 6px; font-size: 13px; color: var(--purple-hi); font-weight: 700; }
   .stats-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; padding: 0 16px 16px; }
   .stat-box { background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 16px 8px; text-align: center; box-shadow: inset 0 1px 0 rgba(199,125,255,0.08); }
@@ -682,7 +685,6 @@
       <div class="profile-top">
         <div class="avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
         <div class="profile-name" id="profileName">User</div>
-        <!-- Country removed -->
         <div class="profile-title" id="profileTitle"></div>
       </div>
       <div class="stats-row">
@@ -1064,11 +1066,9 @@ async function loadFeed() {
     await loadUserReactions(cards.map(c => c.id));
     renderFeed();
     
-    // --- PWA TRIGGER HERE (SHOWS ONCE FEED IS READY) ---
     if (!localStorage.getItem('bs_install_prompted')) {
       setTimeout(() => { showInstallPopup(); }, 1000);
     }
-    // ---------------------------------------------------
 
     fetch(CONFIG.GENERATE_URL, { method: 'POST', headers: { 'Authorization': 'Bearer ' + CONFIG.SUPABASE_KEY, 'Content-Type': 'application/json' }, body: JSON.stringify({ user_id: State.userId, count: 20 }) }).catch(e => {});
   } catch (err) { State.isFetching = false; showFeedError(feed); }
@@ -1467,8 +1467,8 @@ function shareTo(platform) {
   const card = State.cards.find(c => c.id === shareCardId);
   if (!card) return;
   
-  const shareUrl = `${window.location.origin}/card/${card.id}`;
-  const text = `"${card.what}" — Blindspot app\n\nClick here to see the truth: ${shareUrl}`;
+  const shareUrl = `${window.location.origin}${window.location.pathname}`;
+  const text = `"${card.what}" — Blindspot app\n\nClick here to open Blindspot and see the truth: ${shareUrl}`;
 
   if (platform === 'copy') {
     navigator.clipboard?.writeText(text).then(() => toast('🔗 Link copied'));
@@ -2209,4 +2209,4 @@ document.addEventListener('DOMContentLoaded', init);
 </script>
 
 </body>
-           </html>
+                                                      </html>
