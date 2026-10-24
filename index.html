@@ -440,11 +440,10 @@
   .nav-item.create-tab .create-circle svg { width: 22px; height: 22px; color: #fff; }
   .nav-item.create-tab .n-label { color: var(--purple-hi); }
 </style>
-</head>
-<body>
+ </head>
+ <body>
 <div class="app" id="app">
 
-  <!-- SPLASH -->
   <section id="splash" class="screen active">
     <div class="splash-eye-wrap">
       <div class="splash-eye-glow"></div>
@@ -455,9 +454,7 @@
             <radialGradient id="irisGrad" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#C77DFF"/><stop offset="70%" stop-color="#9D4EDD"/><stop offset="100%" stop-color="#7B2CBF"/></radialGradient>
             <radialGradient id="pupilGrad" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1A0B2E"/><stop offset="100%" stop-color="#000000"/></radialGradient>
           </defs>
-          <g stroke="#9D4EDD" stroke-width="1.6" stroke-linecap="round" opacity="0.85">
-            <line x1="88" y1="50" x2="96" y2="50"/><line x1="77" y1="23" x2="83" y2="17"/><line x1="50" y1="12" x2="50" y2="4"/><line x1="23" y1="23" x2="17" y2="17"/><line x1="12" y1="50" x2="4" y2="50"/><line x1="23" y1="77" x2="17" y2="83"/><line x1="50" y1="88" x2="50" y2="96"/><line x1="77" y1="77" x2="83" y2="83"/>
-          </g>
+          <g stroke="#9D4EDD" stroke-width="1.6" stroke-linecap="round" opacity="0.85"><line x1="88" y1="50" x2="96" y2="50"/><line x1="77" y1="23" x2="83" y2="17"/><line x1="50" y1="12" x2="50" y2="4"/><line x1="23" y1="23" x2="17" y2="17"/><line x1="12" y1="50" x2="4" y2="50"/><line x1="23" y1="77" x2="17" y2="83"/><line x1="50" y1="88" x2="50" y2="96"/><line x1="77" y1="77" x2="83" y2="83"/></g>
           <path d="M 12 50 C 28 24, 72 24, 88 50 C 72 76, 28 76, 12 50 Z" fill="rgba(157,78,221,0.15)" stroke="#9D4EDD" stroke-width="3"/>
           <circle cx="50" cy="50" r="19" fill="url(#irisGrad)"/>
           <path d="M 50 50 m -11 0 a 11 11 0 1 1 22 0 a 8 8 0 1 1 -16 0 a 5 5 0 1 1 10 0" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.7"/>
@@ -472,25 +469,17 @@
     </div>
   </section>
 
-  <!-- GENDER -->
   <section id="gender" class="screen">
     <div class="gender-title">Who are you?</div>
     <div class="gender-sub">Your blindspots depend on who you are. Pick the one that fits you.</div>
     <div class="gender-options">
-      <div class="gender-card" data-gender="male" onclick="pickGender('male')">
-        <div class="g-emoji">👨</div>
-        <div class="g-label">Male</div>
-      </div>
-      <div class="gender-card" data-gender="female" onclick="pickGender('female')">
-        <div class="g-emoji">👩</div>
-        <div class="g-label">Female</div>
-      </div>
+      <div class="gender-card" data-gender="male" onclick="pickGender('male')"><div class="g-emoji">👨</div><div class="g-label">Male</div></div>
+      <div class="gender-card" data-gender="female" onclick="pickGender('female')"><div class="g-emoji">👩</div><div class="g-label">Female</div></div>
     </div>
     <div class="gender-note">Once you pick, you can't change it.</div>
     <button class="gender-continue" id="genderContinue" disabled>Continue</button>
   </section>
 
-  <!-- WELCOME -->
   <section id="welcome" class="screen">
     <div class="welcome-eye">👁</div>
     <div class="welcome-title">Welcome to BLINDSPOT</div>
@@ -504,27 +493,9 @@
     <button class="welcome-continue" id="welcomeContinue">Show me →</button>
   </section>
 
-  <!-- CATEGORIES -->
   <section id="categories" class="screen">
     <div class="cat-header">
-      <div class="cat-eye-wrap">
-        <div class="cat-eye-glow"></div>
-        <div class="cat-eye">
-          <svg viewBox="0 0 100 100">
-            <defs>
-              <radialGradient id="irisGrad2" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#C77DFF"/><stop offset="70%" stop-color="#9D4EDD"/><stop offset="100%" stop-color="#7B2CBF"/></radialGradient>
-              <radialGradient id="pupilGrad2" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1A0B2E"/><stop offset="100%" stop-color="#000000"/></radialGradient>
-            </defs>
-            <g stroke="#9D4EDD" stroke-width="1.6" stroke-linecap="round" opacity="0.85">
-              <line x1="88" y1="50" x2="96" y2="50"/><line x1="77" y1="23" x2="83" y2="17"/><line x1="50" y1="12" x2="50" y2="4"/><line x1="23" y1="23" x2="17" y2="17"/><line x1="12" y1="50" x2="4" y2="50"/><line x1="23" y1="77" x2="17" y2="83"/><line x1="50" y1="88" x2="50" y2="96"/><line x1="77" y1="77" x2="83" y2="83"/>
-            </g>
-            <path d="M 12 50 C 28 24, 72 24, 88 50 C 72 76, 28 76, 12 50 Z" fill="rgba(157,78,221,0.15)" stroke="#9D4EDD" stroke-width="3"/>
-            <circle cx="50" cy="50" r="19" fill="url(#irisGrad2)"/>
-            <circle cx="50" cy="50" r="6" fill="url(#pupilGrad2)"/>
-            <circle cx="46" cy="46" r="2.2" fill="#FFFFFF" opacity="0.9"/>
-          </svg>
-        </div>
-      </div>
+      <div class="cat-eye-wrap"><div class="cat-eye-glow"></div><div class="cat-eye"><svg viewBox="0 0 100 100"><defs><radialGradient id="irisGrad2" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#C77DFF"/><stop offset="70%" stop-color="#9D4EDD"/><stop offset="100%" stop-color="#7B2CBF"/></radialGradient><radialGradient id="pupilGrad2" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1A0B2E"/><stop offset="100%" stop-color="#000000"/></radialGradient></defs><g stroke="#9D4EDD" stroke-width="1.6" stroke-linecap="round" opacity="0.85"><line x1="88" y1="50" x2="96" y2="50"/><line x1="77" y1="23" x2="83" y2="17"/><line x1="50" y1="12" x2="50" y2="4"/><line x1="23" y1="23" x2="17" y2="17"/><line x1="12" y1="50" x2="4" y2="50"/><line x1="23" y1="77" x2="17" y2="83"/><line x1="50" y1="88" x2="50" y2="96"/><line x1="77" y1="77" x2="83" y2="83"/></g><path d="M 12 50 C 28 24, 72 24, 88 50 C 72 76, 28 76, 12 50 Z" fill="rgba(157,78,221,0.15)" stroke="#9D4EDD" stroke-width="3"/><circle cx="50" cy="50" r="19" fill="url(#irisGrad2)"/><circle cx="50" cy="50" r="6" fill="url(#pupilGrad2)"/><circle cx="46" cy="46" r="2.2" fill="#FFFFFF" opacity="0.9"/></svg></div></div>
       <h1 class="cat-title">Pick your blindspots</h1>
       <p class="cat-sub">Choose what you want to discover</p>
       <div class="cat-count-badge" id="catCount">Pick up to 3, or skip</div>
@@ -534,7 +505,6 @@
     <button id="catBtn" class="btn-confirm" disabled>Continue</button>
   </section>
 
-  <!-- FEED -->
   <section id="feed" class="screen">
     <div class="feed-swipe" id="feedSwipe"></div>
     <div class="swipe-onboard" id="swipeOnboard">
@@ -544,25 +514,13 @@
     </div>
   </section>
 
-  <!-- SEARCH -->
   <section id="search" class="screen">
-    <div class="search-top">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-      <input id="searchInput" type="text" placeholder="Search existing blindspots..." />
-    </div>
+    <div class="search-top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><input id="searchInput" type="text" placeholder="Search existing blindspots..." /></div>
     <div class="trending-label">Trending</div>
-    <div class="trending-row">
-      <div class="trend-tag" data-q="dating">#dating</div>
-      <div class="trend-tag" data-q="money">#money</div>
-      <div class="trend-tag" data-q="confidence">#confidence</div>
-      <div class="trend-tag" data-q="health">#health</div>
-      <div class="trend-tag" data-q="trauma">#trauma</div>
-      <div class="trend-tag" data-q="tech">#tech</div>
-    </div>
+    <div class="trending-row"><div class="trend-tag" data-q="dating">#dating</div><div class="trend-tag" data-q="money">#money</div><div class="trend-tag" data-q="confidence">#confidence</div><div class="trend-tag" data-q="health">#health</div><div class="trend-tag" data-q="trauma">#trauma</div><div class="trend-tag" data-q="tech">#tech</div></div>
     <div class="search-results" id="searchResults"></div>
   </section>
 
-  <!-- FORGE (SEARCH LOADER) -->
   <section id="forge" class="screen">
     <div class="forge-wrap">
       <div class="forge-head"><div class="eye-logo-mini"></div><span class="forge-brand">BLINDSPOT</span><span class="forge-live"><span class="live-dot"></span> SEARCHING</span></div>
@@ -580,53 +538,17 @@
     </div>
   </section>
 
-  <!-- SAVED -->
-  <section id="saved" class="screen">
-    <div class="saved-head"><div class="saved-title">Saved</div><div class="saved-count" id="savedCount">0 blindspots</div></div>
-    <div class="scrollable saved-list" id="savedList"></div>
-  </section>
+  <section id="saved" class="screen"><div class="saved-head"><div class="saved-title">Saved</div><div class="saved-count" id="savedCount">0 blindspots</div></div><div class="scrollable saved-list" id="savedList"></div></section>
 
-  <!-- MY SPOTS -->
-  <section id="mySpots" class="screen">
-    <div class="saved-head">
-      <div class="saved-title">My Spots</div>
-      <div class="saved-count" id="mySpotsCount">0 spots</div>
-      <button class="select-btn-toggle" id="selectModeToggle">Select</button>
-    </div>
-    <div class="scrollable saved-list" id="mySpotsList"></div>
-  </section>
+  <section id="mySpots" class="screen"><div class="saved-head"><div class="saved-title">My Spots</div><div class="saved-count" id="mySpotsCount">0 spots</div><button class="select-btn-toggle" id="selectModeToggle">Select</button></div><div class="scrollable saved-list" id="mySpotsList"></div></section>
 
-  <!-- CREATE SPOT (4 layers) -->
   <section id="createSpot" class="screen">
-    <div class="cs-header">
-      <div class="cs-back" onclick="closeCreateSpot()">←</div>
-      <div class="cs-title" id="csScreenTitle">Create Your Spot</div>
-      <div class="cs-step-badge" id="csStepBadge">1/3</div>
-    </div>
+    <div class="cs-header"><div class="cs-back" onclick="closeCreateSpot()">←</div><div class="cs-title" id="csScreenTitle">Create Your Spot</div><div class="cs-step-badge" id="csStepBadge">1/3</div></div>
     <div class="cs-progress-bar"><div class="cs-progress-fill" id="csProgressFill" style="width: 33%;"></div></div>
     <div class="cs-body" id="csBody">
-      <div class="cs-step active" data-step="1">
-        <div class="cs-step-title">Name your spot</div>
-        <div class="cs-step-sub">Give your discovery a title that makes people curious.</div>
-        <div class="cs-field"><input type="text" class="cs-input" id="csSpotName" placeholder="e.g. The Truth About Sleep" maxlength="60" /><div class="cs-char-count"><span id="csNameCount">0</span>/60</div></div>
-      </div>
-      <div class="cs-step" data-step="2">
-        <div class="cs-step-title">Write your hook</div>
-        <div class="cs-step-sub">Start with "Why..." — the hook that grabs attention.</div>
-        <div class="cs-field"><div class="cs-field-label"><span class="lbl-icon">✨</span> Your hook (max 2 lines)</div><textarea class="cs-textarea small" id="csWhat" placeholder="e.g. What Never To Do Before You Sleep" maxlength="180"></textarea><div class="cs-char-count"><span id="csWhatCount">0</span>/180</div></div>
-        <div class="cs-field"><div class="cs-field-label"><span class="lbl-icon">💡</span> The twist (2-3 sentences)</div><textarea class="cs-textarea" id="csWhy" placeholder="One hard fact. Personal. Reveal the hidden truth." maxlength="400"></textarea><div class="cs-char-count"><span id="csWhyCount">0</span>/400</div></div>
-      </div>
-      <div class="cs-step" data-step="3">
-        <div class="cs-step-title">Fill the 4 layers</div>
-        <div class="cs-step-sub">Each layer reveals part of the truth.</div>
-        <div class="cs-layer-box"><div class="cs-layer-head"><span class="cs-layer-icon">🔍</span><span class="cs-layer-title">The Secret Truth</span></div><textarea class="cs-textarea small" id="csLayer1" placeholder="Answer with real facts..." maxlength="500"></textarea></div>
-        <div class="cs-layer-box"><div class="cs-layer-head"><span class="cs-layer-icon">🧠</span><span class="cs-layer-title">The Secret Reason</span></div><textarea class="cs-textarea small" id="csLayer2" placeholder="Psychology + who benefits from the lie..." maxlength="500"></textarea></div>
-        <div class="cs-layer-box"><div class="cs-layer-head"><span class="cs-layer-icon">⚠️</span><span class="cs-layer-title">The Secret Consequences</span></div><textarea class="cs-textarea small" id="csLayer3" placeholder="Real cost. Personal. Urgent." maxlength="500"></textarea></div>
-        <div class="cs-layer-box"><div class="cs-layer-head"><span class="cs-layer-icon">✅</span><span class="cs-layer-title">The Secret Solution</span></div><textarea class="cs-textarea small" id="csLayer4" placeholder="4-5 specific actions..." maxlength="500"></textarea></div>
-        <div class="cs-field"><div class="cs-field-label"><span class="lbl-icon">😄</span> Funny ending (optional)</div><textarea class="cs-textarea small" id="csFunny" placeholder="One line. Max 15 words. Dry, smart, dark." maxlength="120"></textarea></div>
-        <div class="cs-field"><div class="cs-field-label"><span class="lbl-icon">✍️</span> Created by (optional)</div><input type="text" class="cs-input" id="csAuthor" placeholder="Leave blank to stay hidden" maxlength="30" /></div>
-        <div class="cs-field"><div class="cs-field-label"><span class="lbl-icon">🎯</span> Category</div><div class="cs-cat-grid" id="csCatGrid"></div></div>
-      </div>
+      <div class="cs-step active" data-step="1"><div class="cs-step-title">Name your spot</div><div class="cs-step-sub">Give your discovery a title that makes people curious.</div><div class="cs-field"><input type="text" class="cs-input" id="csSpotName" placeholder="e.g. The Truth About Sleep" maxlength="60" /><div class="cs-char-count"><span id="csNameCount">0</span>/60</div></div></div>
+      <div class="cs-step" data-step="2"><div class="cs-step-title">Write your hook</div><div class="cs-step-sub">Start with "Why..." — the hook that grabs attention.</div><div class="cs-field"><div class="cs-field-label"><span class="lbl-icon">✨</span> Your hook (max 2 lines)</div><textarea class="cs-textarea small" id="csWhat" placeholder="e.g. What Never To Do Before You Sleep" maxlength="180"></textarea><div class="cs-char-count"><span id="csWhatCount">0</span>/180</div></div><div class="cs-field"><div class="cs-field-label"><span class="lbl-icon">💡</span> The twist (2-3 sentences)</div><textarea class="cs-textarea" id="csWhy" placeholder="One hard fact. Personal. Reveal the hidden truth." maxlength="400"></textarea><div class="cs-char-count"><span id="csWhyCount">0</span>/400</div></div></div>
+      <div class="cs-step" data-step="3"><div class="cs-step-title">Fill the 4 layers</div><div class="cs-step-sub">Each layer reveals part of the truth.</div><div class="cs-layer-box"><div class="cs-layer-head"><span class="cs-layer-icon">🔍</span><span class="cs-layer-title">The Secret Truth</span></div><textarea class="cs-textarea small" id="csLayer1" placeholder="Answer with real facts..." maxlength="500"></textarea></div><div class="cs-layer-box"><div class="cs-layer-head"><span class="cs-layer-icon">🧠</span><span class="cs-layer-title">The Secret Reason</span></div><textarea class="cs-textarea small" id="csLayer2" placeholder="Psychology + who benefits from the lie..." maxlength="500"></textarea></div><div class="cs-layer-box"><div class="cs-layer-head"><span class="cs-layer-icon">⚠️</span><span class="cs-layer-title">The Secret Consequences</span></div><textarea class="cs-textarea small" id="csLayer3" placeholder="Real cost. Personal. Urgent." maxlength="500"></textarea></div><div class="cs-layer-box"><div class="cs-layer-head"><span class="cs-layer-icon">✅</span><span class="cs-layer-title">The Secret Solution</span></div><textarea class="cs-textarea small" id="csLayer4" placeholder="4-5 specific actions..." maxlength="500"></textarea></div><div class="cs-field"><div class="cs-field-label"><span class="lbl-icon">😄</span> Funny ending (optional)</div><textarea class="cs-textarea small" id="csFunny" placeholder="One line. Max 15 words. Dry, smart, dark." maxlength="120"></textarea></div><div class="cs-field"><div class="cs-field-label"><span class="lbl-icon">✍️</span> Created by (optional)</div><input type="text" class="cs-input" id="csAuthor" placeholder="Leave blank to stay hidden" maxlength="30" /></div><div class="cs-field"><div class="cs-field-label"><span class="lbl-icon">🎯</span> Category</div><div class="cs-cat-grid" id="csCatGrid"></div></div></div>
       <div class="cs-step" data-step="5"><div class="cs-verify-wrap"><div class="cs-verify-spinner"></div><div class="cs-verify-title">Publishing your spot...</div><div class="cs-verify-sub">Saving your truth.<br>This takes a few seconds.</div></div></div>
       <div class="cs-step" data-step="6"><div class="cs-success-wrap"><div class="cs-success-icon">🎉</div><div class="cs-success-title">Your spot is live!</div><div class="cs-success-sub">People will discover it in the feed.</div><div class="cs-success-card" id="csSuccessCard"></div><button class="cs-btn cs-btn-next" onclick="finishCreateSpot()">Back to Feed</button></div></div>
       <div class="cs-step" data-step="7"><div class="cs-error-wrap"><div class="cs-error-icon">⚠️</div><div class="cs-error-title">Something went wrong</div><div class="cs-error-reason" id="csErrorReason">Reason here...</div><button class="cs-btn cs-btn-next" onclick="retryCreateSpot()">Try Again</button></div></div>
@@ -634,64 +556,32 @@
     <div class="cs-footer" id="csFooter"><button class="cs-btn cs-btn-back" id="csBackBtn" onclick="csBack()">←</button><button class="cs-btn cs-btn-next" id="csNextBtn" onclick="csNext()">Next →</button></div>
   </section>
 
-  <!-- BULK PASTE (NORMAL) -->
   <section id="bulkPaste" class="screen">
-    <div class="bulk-header">
-      <div class="bulk-back" onclick="switchTab('profile')">←</div>
-      <div class="bulk-title">Bulk Paste</div>
-      <div class="bulk-badge">ADVANCED</div>
-    </div>
+    <div class="bulk-header"><div class="bulk-back" onclick="switchTab('profile')">←</div><div class="bulk-title">Bulk Paste</div><div class="bulk-badge">ADVANCED</div></div>
     <div class="bulk-body">
-      <div class="bulk-instructions">
-        Paste multiple spots below. Each spot must start with <code>---SPOT---</code> on its own line.<br>
-        Then include: <code>SpotName:</code>, <code>Category:</code>, <code>Author:</code>, <code>Hook:</code>, <code>Twist:</code>, <code>Layer1:</code> to <code>Layer4:</code>, <code>Funny:</code>.
-      </div>
+      <div class="bulk-instructions">Paste multiple spots below. Each spot must start with <code>---SPOT---</code> on its own line.<br>Then include: <code>SpotName:</code>, <code>Category:</code>, <code>Author:</code>, <code>Hook:</code>, <code>Twist:</code>, <code>Layer1:</code> to <code>Layer4:</code>, <code>Funny:</code>.</div>
       <textarea class="bulk-textarea" id="bulkTextarea" placeholder="---SPOT---&#10;SpotName: The Truth About Sleep&#10;Category: health&#10;Author: John&#10;Hook: Why Sleeping 8 Hours Will Make You Broke&#10;Twist: Everybody tells you to sleep 8 hours...&#10;Layer1: ...&#10;Layer2: ...&#10;Layer3: ...&#10;Layer4: ...&#10;Funny: Your pillow is stealing your future."></textarea>
-      <div class="bulk-progress-box" id="bulkProgressBox">
-        <div class="bulk-progress-label" id="bulkProgressLabel">Publishing...</div>
-        <div class="bulk-progress-bar"><div class="bulk-progress-fill" id="bulkProgressFill"></div></div>
-        <div class="bulk-progress-stats"><span id="bulkProgressCurrent">0</span><span id="bulkProgressTotal">0</span></div>
-      </div>
+      <div class="bulk-progress-box" id="bulkProgressBox"><div class="bulk-progress-label" id="bulkProgressLabel">Publishing...</div><div class="bulk-progress-bar"><div class="bulk-progress-fill" id="bulkProgressFill"></div></div><div class="bulk-progress-stats"><span id="bulkProgressCurrent">0</span><span id="bulkProgressTotal">0</span></div></div>
       <div class="bulk-result" id="bulkResult"></div>
       <button class="bulk-btn-publish" id="bulkPublishBtn" onclick="publishBulk()">🚀 Publish All Spots</button>
     </div>
   </section>
 
-  <!-- BULK PASTE (VIOLENCE) -->
   <section id="violencePaste" class="screen">
-    <div class="bulk-header">
-      <div class="bulk-back" onclick="switchTab('profile')">←</div>
-      <div class="bulk-title">Violence Spots</div>
-      <div class="bulk-badge" style="color: #FF3B30; border-color: rgba(255,59,48,0.5); background: rgba(255,59,48,0.1);">LOCKED</div>
-    </div>
+    <div class="bulk-header"><div class="bulk-back" onclick="switchTab('profile')">←</div><div class="bulk-title">Violence Spots</div><div class="bulk-badge" style="color: #FF3B30; border-color: rgba(255,59,48,0.5); background: rgba(255,59,48,0.1);">LOCKED</div></div>
     <div class="bulk-body">
-      <div class="bulk-instructions" style="background: rgba(255,59,48,0.08); border-color: rgba(255,59,48,0.3); color: #FF6B60;">
-        ⚠️ <b>Warning:</b> These spots are locked automatically. When a user taps to view the truth, a countdown popup will appear, and the spot will only unlock the next morning at 6:00 AM.
-      </div>
+      <div class="bulk-instructions" style="background: rgba(255,59,48,0.08); border-color: rgba(255,59,48,0.3); color: #FF6B60;">⚠️ <b>Warning:</b> These spots are locked automatically. When a user taps to view the truth, a countdown popup will appear, and the spot will only unlock the next morning at 6:00 AM.</div>
       <textarea class="bulk-textarea" id="bulkViolenceTextarea" placeholder="---SPOT---&#10;SpotName: Why He Will Stab You At 12PM&#10;Category: dark_psychology&#10;Author: John&#10;Hook: ...&#10;Twist: ...&#10;Layer1: ...&#10;Layer2: ...&#10;Layer3: ...&#10;Layer4: ...&#10;Funny: ..."></textarea>
-      <div class="bulk-progress-box" id="violenceProgressBox">
-        <div class="bulk-progress-label" id="violenceProgressLabel">Publishing...</div>
-        <div class="bulk-progress-bar"><div class="bulk-progress-fill" id="violenceProgressFill"></div></div>
-        <div class="bulk-progress-stats"><span id="violenceProgressCurrent">0</span><span id="violenceProgressTotal">0</span></div>
-      </div>
+      <div class="bulk-progress-box" id="violenceProgressBox"><div class="bulk-progress-label" id="violenceProgressLabel">Publishing...</div><div class="bulk-progress-bar"><div class="bulk-progress-fill" id="violenceProgressFill"></div></div><div class="bulk-progress-stats"><span id="violenceProgressCurrent">0</span><span id="violenceProgressTotal">0</span></div></div>
       <div class="bulk-result" id="violenceResult"></div>
       <button class="bulk-btn-publish" id="violencePublishBtn" onclick="publishViolenceBulk()" style="background: linear-gradient(135deg, #FF3B30, #8B0000); box-shadow: 0 0 25px rgba(255,59,48,0.7);">🚀 Publish Violence Spots</button>
     </div>
   </section>
 
-  <!-- PROFILE -->
   <section id="profile" class="screen">
     <div class="scrollable">
-      <div class="profile-top">
-        <div class="avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
-        <div class="profile-name" id="profileName">User</div>
-        <div class="profile-title" id="profileTitle"></div>
-      </div>
-      <div class="stats-row">
-        <div class="stat-box"><div class="stat-num" id="statSeen">0</div><div class="stat-lbl">Seen</div></div>
-        <div class="stat-box"><div class="stat-num" id="statBlown">0</div><div class="stat-lbl">Mind Blown</div></div>
-        <div class="stat-box"><div class="stat-num" id="statSaved">0</div><div class="stat-lbl">Saved</div></div>
-      </div>
+      <div class="profile-top"><div class="avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div><div class="profile-name" id="profileName">User</div><div class="profile-title" id="profileTitle"></div></div>
+      <div class="stats-row"><div class="stat-box"><div class="stat-num" id="statSeen">0</div><div class="stat-lbl">Seen</div></div><div class="stat-box"><div class="stat-num" id="statBlown">0</div><div class="stat-lbl">Mind Blown</div></div><div class="stat-box"><div class="stat-num" id="statSaved">0</div><div class="stat-lbl">Saved</div></div></div>
       <div class="settings-list">
         <div class="setting-row" id="rowInterests"><span class="s-icon">🎯</span><span class="s-title">Interests</span><span class="s-arrow">›</span></div>
         <div class="setting-row" id="rowBulk" style="display:none;"><span class="s-icon">📋</span><span class="s-title">Bulk Paste (Advanced)</span><span class="s-arrow">›</span></div>
@@ -705,14 +595,12 @@
     </div>
   </section>
 
-  <!-- PRIVACY, TERMS, ABOUT -->
   <section id="privacy" class="screen"><div class="content-head"><div class="content-back" onclick="switchTab('profile')">←</div><div class="content-head-title">Privacy Policy</div></div><div class="scrollable"><div class="content-body"><p><strong>Last updated:</strong> <span id="privacyDate"></span></p><h2>1. What We Collect</h2><p>When you use Blindspot, we collect:</p><ul><li><strong>Device ID</strong> — a unique anonymous identifier for your device</li><li><strong>Gender</strong> — to personalize your feed</li><li><strong>Category preferences</strong> — the 3 interests you pick</li><li><strong>Reactions</strong> — which cards you react to or save</li><li><strong>View history</strong> — which cards you've seen</li></ul><h2>2. How We Use It</h2><p>We use your data only to:</p><ul><li>Personalize your feed with cards you'll enjoy</li><li>Send you daily curiosity notifications</li><li>Improve the app experience</li></ul><p>We never sell your data. Ever.</p><h2>3. Technology Stack</h2><p>Blindspot uses Blindspot proprietary technology to work, including:</p><ul><li><strong>Secure database storage</strong> for your data</li><li><strong>Advanced technology</strong> for card generation</li><li><strong>Fact-checking services</strong> for accuracy</li><li><strong>Advertising partners</strong> for rewarded ads</li></ul><p>Each has its own privacy policy.</p><h2>4. Your Rights</h2><p>You can:</p><ul><li>Delete all your data anytime via "Logout"</li><li>Turn off notifications in settings</li><li>Uninstall the app to stop all data collection</li></ul><h2>5. Contact</h2><p>Questions? Email us at <strong>privacy@blindspot.app</strong></p></div></div></section>
 
   <section id="terms" class="screen"><div class="content-head"><div class="content-back" onclick="switchTab('profile')">←</div><div class="content-head-title">Terms of Service</div></div><div class="scrollable"><div class="content-body"><p><strong>Last updated:</strong> <span id="termsDate"></span></p><h2>1. Acceptance</h2><p>By using Blindspot, you agree to these terms.</p><h2>2. What Blindspot Is</h2><p>Blindspot is a curiosity app. We generate cards that challenge common beliefs.</p><h2>3. Content Disclaimer</h2><p><strong>Important:</strong> Cards are generated by Blindspot's advanced technology with integrated fact-checking. While we try hard for accuracy:</p><ul><li>We don't guarantee every fact is 100% correct</li><li>Cards are for curiosity and entertainment</li><li>Don't make major life decisions based solely on them</li></ul><h2>4. Your Responsibilities</h2><p>You agree to:</p><ul><li>Not abuse, scrape, or reverse-engineer the app</li><li>Not share illegal content</li><li>Use the app for personal, non-commercial purposes</li></ul><h2>5. Contact</h2><p>Questions? Email <strong>legal@blindspot.app</strong></p></div></div></section>
 
   <section id="about" class="screen"><div class="content-head"><div class="content-back" onclick="switchTab('profile')">←</div><div class="content-head-title">About Blindspot</div></div><div class="scrollable"><div class="content-body"><div style="text-align: center; margin: 20px 0 30px;"><div style="font-size: 64px; filter: drop-shadow(0 0 20px #9D4EDD);">👁</div></div><h2>What Is Blindspot?</h2><p>Blindspot is a fascination engine. We expose the comfortable lies you believe — one card at a time.</p><p>Every card challenges a belief. Every layer reveals the truth. Every day is a new discovery.</p><h2>Our Inspiration</h2><p>We're inspired by Mel Martin — the king of curiosity and fascination.</p><h2>How It Works</h2><ul><li>You pick your gender</li><li>You pick 3 interests</li><li>Blindspot generates fresh cards every day</li><li>Each card hides 4 layers of truth</li><li>Watch a short ad to unlock</li><li>Create your own spots</li></ul><h2>Version</h2><p><strong>Blindspot v2.0.0</strong></p><h2>Contact</h2><p>Feedback? Story idea? Say hi: <strong>hello@blindspot.app</strong></p><p style="text-align: center; margin-top: 40px; color: #666; font-style: italic;">Everyone sees your blindspots. Except you.</p></div></div></section>
 
-  <!-- BOTTOM NAV -->
   <nav class="bottom-nav hidden" id="bottomNav">
     <div class="nav-item active" data-tab="feed"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 10l9-7 9 7v10a2 2 0 0 1-2 2h-4v-6h-6v6H5a2 2 0 0 1-2-2z"/></svg><span class="n-label">Home</span></div>
     <div class="nav-item" data-tab="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><span class="n-label">Search</span></div>
@@ -721,116 +609,32 @@
     <div class="nav-item" data-tab="profile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/></svg><span class="n-label">Profile</span></div>
   </nav>
 
-  <!-- MODALS -->
   <div class="modal-overlay" id="modal"><div class="modal-sheet"><div class="modal-head"><button class="modal-close" id="modalClose">✕</button><div class="modal-title" id="modalTitle">The Secret Truth</div></div><div class="modal-body" id="modalBody"></div><button class="modal-next" id="modalNext">Next Layer →</button></div></div>
 
   <div class="ad-popup-overlay" id="adPopup"><div class="ad-popup"><div class="ad-lock-icon">🔒</div><h3>Unlock this truth</h3><p>Watch a short video. Learn what nobody will tell you.</p><div class="ad-duration">⏱ 15-30 SECONDS</div><button class="ad-watch-btn" id="adWatchBtn">▶ Watch Video</button><button class="ad-cancel-btn" id="adCancelBtn">Cancel</button></div></div>
 
-  <!-- MEL MARTIN VIOLENCE POPUP -->
   <div class="modal-overlay" id="melPopup" style="z-index: 10020; background: rgba(0,0,0,0.95); backdrop-filter: blur(10px);">
     <div class="confirm-dialog" style="border-color: #FF3B30; box-shadow: 0 0 50px rgba(255,59,48,0.5); position: relative; overflow: hidden;">
       <div style="position: absolute; top: 0; left: 0; right: 0; height: 100px; background: radial-gradient(ellipse at 50% 0%, rgba(255,59,48,0.2) 0%, transparent 70%); pointer-events: none;"></div>
-      
       <div class="confirm-icon" style="filter: drop-shadow(0 0 20px #FF3B30); font-size: 56px; margin-bottom: 14px; animation: blink 2s infinite;">🔒</div>
       <div class="confirm-title" style="font-size: 24px; font-weight: 900; color: #fff; letter-spacing: 0.5px; text-shadow: 0 0 20px rgba(255,59,48,0.6);">The Clock is Ticking</div>
-      
-      <div class="confirm-text" style="text-align: center; font-size: 14px; line-height: 1.7; color: #bbb; margin-bottom: 16px;">
-        This truth is too dangerous to expose right now.<br><br>
-        The seal breaks at exactly <b style="color: #FF6B60;">6:00 AM tomorrow morning.</b><br><br>
-        Will you be awake when the secret is finally exposed?
-      </div>
-
-      <div style="background: rgba(0,0,0,0.6); border: 1px solid rgba(255,59,48,0.3); border-radius: 14px; padding: 14px; margin-bottom: 22px;">
-        <div style="font-size: 10px; color: #FF6B60; letter-spacing: 2px; font-weight: 800; text-transform: uppercase; margin-bottom: 6px;">Seal Breaks In</div>
-        <div id="melCountdown" style="font-family: 'SF Mono', monospace; font-size: 32px; font-weight: 900; color: #FF3B30; text-shadow: 0 0 20px rgba(255,59,48,0.8); letter-spacing: 2px;">--:--:--</div>
-      </div>
-
-      <div class="confirm-actions">
-        <button class="btn-danger" id="melBtn" onclick="closeMelPopup()" style="background: linear-gradient(135deg, #FF3B30, #8B0000);">I'll Be There</button>
-      </div>
+      <div class="confirm-text" style="text-align: center; font-size: 14px; line-height: 1.7; color: #bbb; margin-bottom: 16px;">This truth is too dangerous to expose right now.<br><br>The seal breaks at exactly <b style="color: #FF6B60;">6:00 AM tomorrow morning.</b><br><br>Will you be awake when the secret is finally exposed?</div>
+      <div style="background: rgba(0,0,0,0.6); border: 1px solid rgba(255,59,48,0.3); border-radius: 14px; padding: 14px; margin-bottom: 22px;"><div style="font-size: 10px; color: #FF6B60; letter-spacing: 2px; font-weight: 800; text-transform: uppercase; margin-bottom: 6px;">Seal Breaks In</div><div id="melCountdown" style="font-family: 'SF Mono', monospace; font-size: 32px; font-weight: 900; color: #FF3B30; text-shadow: 0 0 20px rgba(255,59,48,0.8); letter-spacing: 2px;">--:--:--</div></div>
+      <div class="confirm-actions"><button class="btn-danger" id="melBtn" onclick="closeMelPopup()" style="background: linear-gradient(135deg, #FF3B30, #8B0000);">I'll Be There</button></div>
     </div>
   </div>
 
-  <!-- SHARE MODAL -->
-  <div class="modal-overlay" id="shareModal">
-    <div class="share-sheet">
-      <button class="modal-close" onclick="closeShare()" style="position: absolute; top: 16px; right: 16px; z-index: 10;">✕</button>
-      <div class="share-head" style="margin-top: 10px;">Share this blindspot</div>
-      <div class="share-grid">
-        <div class="share-opt" data-platform="copy"><span class="share-emoji">🔗</span><span>Copy Link</span></div>
-        <div class="share-opt" data-platform="whatsapp"><span class="share-emoji">💬</span><span>WhatsApp</span></div>
-        <div class="share-opt" data-platform="twitter"><span class="share-emoji">🐦</span><span>Twitter</span></div>
-        <div class="share-opt" data-platform="insta"><span class="share-emoji">📸</span><span>Instagram</span></div>
-      </div>
-      <button class="share-cancel" id="shareCancel" onclick="closeShare()">Cancel</button>
-    </div>
-  </div>
+  <div class="modal-overlay" id="shareModal"><div class="share-sheet"><button class="modal-close" onclick="closeShare()" style="position: absolute; top: 16px; right: 16px; z-index: 10;">✕</button><div class="share-head" style="margin-top: 10px;">Share this blindspot</div><div class="share-grid"><div class="share-opt" data-platform="copy"><span class="share-emoji">🔗</span><span>Copy Link</span></div><div class="share-opt" data-platform="whatsapp"><span class="share-emoji">💬</span><span>WhatsApp</span></div><div class="share-opt" data-platform="twitter"><span class="share-emoji">🐦</span><span>Twitter</span></div><div class="share-opt" data-platform="insta"><span class="share-emoji">📸</span><span>Instagram</span></div></div><button class="share-cancel" id="shareCancel" onclick="closeShare()">Cancel</button></div></div>
 
   <div class="modal-overlay" id="logoutModal"><div class="confirm-dialog"><div class="confirm-icon">⚠️</div><div class="confirm-title">Logout & Delete Data?</div><div class="confirm-text"><p>Here's what will happen:</p><ul><li>Your gender — gone</li><li>Your picked categories — gone</li><li>Your saved cards — gone</li><li>Your blindspot history — gone</li><li>Daily notifications — stopped</li><li>All your data — permanently deleted</li></ul><p class="confirm-warn">This cannot be undone.</p></div><div class="confirm-actions"><button class="btn-danger" id="logoutConfirm">Yes, Delete Everything</button><button class="btn-outline" id="logoutCancel">Cancel</button></div></div></div>
 
-  <div class="modal-overlay" id="deleteSpotModal">
-    <div class="confirm-dialog">
-      <div class="confirm-icon">🗑️</div>
-      <div class="confirm-title">Delete this spot?</div>
-      <div class="confirm-text">
-        <p>If you delete it:</p>
-        <ul>
-          <li>It will be removed from My Spots</li>
-          <li>It won't show in anyone's feed again</li>
-          <li>All reactions on it will disappear</li>
-          <li>It cannot be recovered</li>
-        </ul>
-        <p class="confirm-warn">This cannot be undone.</p>
-      </div>
-      <div class="confirm-actions">
-        <button class="btn-danger" id="deleteSpotConfirm">Yes, Delete It</button>
-        <button class="btn-outline" id="deleteSpotCancel">Cancel</button>
-      </div>
-    </div>
-  </div>
+  <div class="modal-overlay" id="deleteSpotModal"><div class="confirm-dialog"><div class="confirm-icon">🗑️</div><div class="confirm-title">Delete this spot?</div><div class="confirm-text"><p>If you delete it:</p><ul><li>It will be removed from My Spots</li><li>It won't show in anyone's feed again</li><li>All reactions on it will disappear</li><li>It cannot be recovered</li></ul><p class="confirm-warn">This cannot be undone.</p></div><div class="confirm-actions"><button class="btn-danger" id="deleteSpotConfirm">Yes, Delete It</button><button class="btn-outline" id="deleteSpotCancel">Cancel</button></div></div></div>
 
-  <div class="modal-overlay" id="batchDeleteModal">
-    <div class="confirm-dialog">
-      <div class="confirm-icon">🗑️</div>
-      <div class="confirm-title">Delete <span id="batchDeleteCount">0</span> spots?</div>
-      <div class="confirm-text">
-        <p>All selected spots will be deleted permanently:</p>
-        <ul>
-          <li>They will be removed from My Spots</li>
-          <li>They won't show in anyone's feed</li>
-          <li>All reactions will disappear</li>
-          <li>There is no undo</li>
-        </ul>
-        <p class="confirm-warn">This cannot be undone.</p>
-      </div>
-      <div class="confirm-actions">
-        <button class="btn-danger" id="batchDeleteConfirm">Yes, Delete All</button>
-        <button class="btn-outline" id="batchDeleteCancel">Cancel</button>
-      </div>
-    </div>
-  </div>
+  <div class="modal-overlay" id="batchDeleteModal"><div class="confirm-dialog"><div class="confirm-icon">🗑️</div><div class="confirm-title">Delete <span id="batchDeleteCount">0</span> spots?</div><div class="confirm-text"><p>All selected spots will be deleted permanently:</p><ul><li>They will be removed from My Spots</li><li>They won't show in anyone's feed</li><li>All reactions will disappear</li><li>There is no undo</li></ul><p class="confirm-warn">This cannot be undone.</p></div><div class="confirm-actions"><button class="btn-danger" id="batchDeleteConfirm">Yes, Delete All</button><button class="btn-outline" id="batchDeleteCancel">Cancel</button></div></div></div>
 
-  <div class="select-bar" id="selectBar">
-    <span class="select-bar-count" id="selectCount">0 selected</span>
-    <button class="select-bar-btn cancel" id="selectAllBtn" onclick="selectAllSpots()">All</button>
-    <button class="select-bar-btn cancel" id="selectCancelBtn">Cancel</button>
-    <button class="select-bar-btn delete" id="selectDeleteBtn" disabled>🗑️ Delete</button>
-  </div>
+  <div class="select-bar" id="selectBar"><span class="select-bar-count" id="selectCount">0 selected</span><button class="select-bar-btn cancel" id="selectAllBtn" onclick="selectAllSpots()">All</button><button class="select-bar-btn cancel" id="selectCancelBtn">Cancel</button><button class="select-bar-btn delete" id="selectDeleteBtn" disabled>🗑️ Delete</button></div>
 
-  <!-- PWA INSTALL POPUP -->
-  <div class="modal-overlay" id="installModal" style="align-items: center; padding: 20px; z-index: 10005;">
-    <div class="confirm-dialog" style="text-align: center; border-color: var(--purple-hi);">
-      <div class="confirm-icon" style="filter: drop-shadow(0 0 15px var(--purple)); font-size: 56px; margin-bottom: 10px;">📲</div>
-      <div class="confirm-title" style="font-size: 22px;">Install Blindspot</div>
-      <div class="confirm-text" id="installText" style="text-align: center; font-size: 14px; line-height: 1.6; margin-bottom: 20px;">
-        Add Blindspot to your home screen for the full app experience.
-      </div>
-      <div class="confirm-actions">
-        <button class="btn-primary" id="installBtn" style="width: 100%; margin-top: 0;">Install App</button>
-        <button class="btn-outline" onclick="document.getElementById('installModal').classList.remove('active')">Maybe Later</button>
-      </div>
-    </div>
-  </div>
+  <div class="modal-overlay" id="installModal" style="align-items: center; padding: 20px; z-index: 10005;"><div class="confirm-dialog" style="text-align: center; border-color: var(--purple-hi);"><div class="confirm-icon" style="filter: drop-shadow(0 0 15px var(--purple)); font-size: 56px; margin-bottom: 10px;">📲</div><div class="confirm-title" style="font-size: 22px;">Install Blindspot</div><div class="confirm-text" id="installText" style="text-align: center; font-size: 14px; line-height: 1.6; margin-bottom: 20px;">Add Blindspot to your home screen for the full app experience.</div><div class="confirm-actions"><button class="btn-primary" id="installBtn" style="width: 100%; margin-top: 0;">Install App</button><button class="btn-outline" onclick="document.getElementById('installModal').classList.remove('active')">Maybe Later</button></div></div></div>
 
   <div class="toast" id="toast"></div>
 
@@ -853,22 +657,7 @@ const CONFIG = {
 const sb = window.supabase.createClient(CONFIG.SUPABASE_URL, CONFIG.SUPABASE_KEY);
 
 const CATEGORIES = [
-  { id: 'dating', name: 'Dating', emoji: '💘' },
-  { id: 'attachment', name: 'Attachment', emoji: '🪢' },
-  { id: 'heartbreak', name: 'Heartbreak', emoji: '💔' },
-  { id: 'love', name: 'Love', emoji: '❤️' },
-  { id: 'relationship', name: 'Relationship', emoji: '💞' },
-  { id: 'intimacy', name: 'Intimacy', emoji: '🫂' },
-  { id: 'marriage', name: 'Marriage', emoji: '💍' },
-  { id: 'health', name: 'Health', emoji: '🩺' },
-  { id: 'money', name: 'Money', emoji: '💰' },
-  { id: 'business', name: 'Business', emoji: '💼' },
-  { id: 'travel', name: 'Travel', emoji: '✈️' },
-  { id: 'tech', name: 'Tech', emoji: '💻' },
-  { id: 'dark_psychology', name: 'Dark Psychology', emoji: '🧠' },
-  { id: 'confidence', name: 'Confidence', emoji: '🦁' },
-  { id: 'social_skills', name: 'Social Skills', emoji: '🗣️' },
-  { id: 'family_trauma', name: 'Family Trauma', emoji: '🏚️' }
+  { id: 'dating', name: 'Dating', emoji: '💘' }, { id: 'attachment', name: 'Attachment', emoji: '🪢' }, { id: 'heartbreak', name: 'Heartbreak', emoji: '💔' }, { id: 'love', name: 'Love', emoji: '❤️' }, { id: 'relationship', name: 'Relationship', emoji: '💞' }, { id: 'intimacy', name: 'Intimacy', emoji: '🫂' }, { id: 'marriage', name: 'Marriage', emoji: '💍' }, { id: 'health', name: 'Health', emoji: '🩺' }, { id: 'money', name: 'Money', emoji: '💰' }, { id: 'business', name: 'Business', emoji: '💼' }, { id: 'travel', name: 'Travel', emoji: '✈️' }, { id: 'tech', name: 'Tech', emoji: '💻' }, { id: 'dark_psychology', name: 'Dark Psychology', emoji: '🧠' }, { id: 'confidence', name: 'Confidence', emoji: '🦁' }, { id: 'social_skills', name: 'Social Skills', emoji: '🗣️' }, { id: 'family_trauma', name: 'Family Trauma', emoji: '🏚️' }
 ];
 
 const State = {
@@ -895,116 +684,59 @@ async function init() {
   State.blown = parseInt(localStorage.getItem('bs_blown') || '0');
   State.gender = localStorage.getItem('bs_gender');
   State.genderPicked = !!State.gender;
-  
   const path = window.location.pathname;
-  if (path.includes('/card/')) {
-    State.deepLinkCardId = path.split('/card/')[1];
-    window.history.replaceState({}, '', '/');
-  }
-
+  if (path.includes('/card/')) { State.deepLinkCardId = path.split('/card/')[1]; window.history.replaceState({}, '', '/'); }
   if (!State.userId) {
-    State.userId = (crypto.randomUUID && crypto.randomUUID()) || 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-      const r = Math.random() * 16 | 0; const v = c === 'x' ? r : (r & 0x3 | 0x8); return v.toString(16);
-    });
+    State.userId = (crypto.randomUUID && crypto.randomUUID()) || 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) { const r = Math.random() * 16 | 0; const v = c === 'x' ? r : (r & 0x3 | 0x8); return v.toString(16); });
     localStorage.setItem('bs_user_id', State.userId);
   }
-  
   setTimeout(async () => {
-    try {
-      const { data: existing } = await sb.from('user_preferences').select('user_id').eq('user_id', State.userId).maybeSingle();
-      if (!existing) {
-        await sb.from('user_preferences').insert({ user_id: State.userId, categories: State.pickedCats.length > 0 ? State.pickedCats : ['all'], gender: State.gender || null });
-      }
-    } catch (e) {}
+    try { const { data: existing } = await sb.from('user_preferences').select('user_id').eq('user_id', State.userId).maybeSingle(); if (!existing) { await sb.from('user_preferences').insert({ user_id: State.userId, categories: State.pickedCats.length > 0 ? State.pickedCats : ['all'], gender: State.gender || null }); } } catch (e) {}
   }, 2000);
-  
   document.getElementById('bottomNav').classList.add('hidden');
   setTimeout(() => {
-    if (!State.genderPicked) {
-      go('gender');
-      document.getElementById('bottomNav').classList.add('hidden');
-    } else if (!localStorage.getItem('bs_welcome_seen')) {
-      go('welcome');
-      document.getElementById('bottomNav').classList.add('hidden');
-    } else if (State.pickedCats.length > 0) {
-      go('feed'); document.getElementById('bottomNav').classList.remove('hidden'); loadFeed(); startHeartbeat();
-    } else {
-      go('categories'); document.getElementById('bottomNav').classList.add('hidden'); renderCategories();
-    }
+    if (!State.genderPicked) { go('gender'); document.getElementById('bottomNav').classList.add('hidden'); }
+    else if (!localStorage.getItem('bs_welcome_seen')) { go('welcome'); document.getElementById('bottomNav').classList.add('hidden'); }
+    else if (State.pickedCats.length > 0) { go('feed'); document.getElementById('bottomNav').classList.remove('hidden'); loadFeed(); startHeartbeat(); }
+    else { go('categories'); document.getElementById('bottomNav').classList.add('hidden'); renderCategories(); }
   }, 3500);
   wireEvents();
   bindSwipe();
   const today = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
-  const privDate = document.getElementById('privacyDate');
-  const termsDate = document.getElementById('termsDate');
-  if (privDate) privDate.textContent = today;
-  if (termsDate) termsDate.textContent = today;
+  const privDate = document.getElementById('privacyDate'); const termsDate = document.getElementById('termsDate');
+  if (privDate) privDate.textContent = today; if (termsDate) termsDate.textContent = today;
 }
 
 function go(screenId) {
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
-  const el = document.getElementById(screenId);
-  if (el) el.classList.add('active');
+  const el = document.getElementById(screenId); if (el) el.classList.add('active');
   const nav = document.getElementById('bottomNav');
-  if (nav) {
-    const hideOnScreens = ['splash', 'gender', 'welcome', 'categories', 'forge', 'createSpot', 'bulkPaste', 'violencePaste'];
-    if (hideOnScreens.includes(screenId)) nav.classList.add('hidden');
-    else if (State.pickedCats.length > 0) nav.classList.remove('hidden');
-  }
+  if (nav) { const hideOnScreens = ['splash', 'gender', 'welcome', 'categories', 'forge', 'createSpot', 'bulkPaste', 'violencePaste']; if (hideOnScreens.includes(screenId)) nav.classList.add('hidden'); else if (State.pickedCats.length > 0) nav.classList.remove('hidden'); }
 }
 
 function startHeartbeat() { if (State.heartbeatInterval) return; updateLastSeen(); State.heartbeatInterval = setInterval(updateLastSeen, 60000); }
 
-async function updateLastSeen() {
-  if (!State.userId) return;
-  try {
-    await fetch(CONFIG.UPDATE_LAST_SEEN_URL, { method: 'POST', headers: { 'Authorization': 'Bearer ' + CONFIG.SUPABASE_KEY, 'Content-Type': 'application/json' }, body: JSON.stringify({ user_id: State.userId }) });
-  } catch (e) {}
-}
+async function updateLastSeen() { if (!State.userId) return; try { await fetch(CONFIG.UPDATE_LAST_SEEN_URL, { method: 'POST', headers: { 'Authorization': 'Bearer ' + CONFIG.SUPABASE_KEY, 'Content-Type': 'application/json' }, body: JSON.stringify({ user_id: State.userId }) }); } catch (e) {} }
 
-function pickGender(gender) {
-  State.gender = gender;
-  document.querySelectorAll('.gender-card').forEach(c => c.classList.remove('selected'));
-  document.querySelector(`.gender-card[data-gender="${gender}"]`).classList.add('selected');
-  document.getElementById('genderContinue').disabled = false;
-  haptic(20);
-}
+function pickGender(gender) { State.gender = gender; document.querySelectorAll('.gender-card').forEach(c => c.classList.remove('selected')); document.querySelector(`.gender-card[data-gender="${gender}"]`).classList.add('selected'); document.getElementById('genderContinue').disabled = false; haptic(20); }
 
 async function confirmGender() {
   if (!State.gender) return;
-  localStorage.setItem('bs_gender', State.gender);
-  State.genderPicked = true;
-  haptic(40);
-  try {
-    await sb.from('user_preferences').upsert({
-      user_id: State.userId,
-      gender: State.gender,
-      categories: State.pickedCats.length > 0 ? State.pickedCats : ['all']
-    }, { onConflict: 'user_id' });
-  } catch (err) { console.log('Gender save error:', err); }
-  if (!localStorage.getItem('bs_welcome_seen')) {
-    go('welcome');
-  } else if (State.pickedCats.length > 0) {
-    go('feed'); document.getElementById('bottomNav').classList.remove('hidden'); loadFeed(); startHeartbeat();
-  } else {
-    go('categories'); renderCategories();
-  }
+  localStorage.setItem('bs_gender', State.gender); State.genderPicked = true; haptic(40);
+  try { await sb.from('user_preferences').upsert({ user_id: State.userId, gender: State.gender, categories: State.pickedCats.length > 0 ? State.pickedCats : ['all'] }, { onConflict: 'user_id' }); } catch (err) {}
+  if (!localStorage.getItem('bs_welcome_seen')) { go('welcome'); }
+  else if (State.pickedCats.length > 0) { go('feed'); document.getElementById('bottomNav').classList.remove('hidden'); loadFeed(); startHeartbeat(); }
+  else { go('categories'); renderCategories(); }
 }
 
-function confirmWelcome() {
-  localStorage.setItem('bs_welcome_seen', 'true');
-  haptic(40);
-  go('categories');
-  renderCategories();
-}
+function confirmWelcome() { localStorage.setItem('bs_welcome_seen', 'true'); haptic(40); go('categories'); renderCategories(); }
 
 function renderCategories() {
   const grid = document.getElementById('catGrid'); grid.innerHTML = '';
   const isAllMode = State.pickedCats.includes('all');
   CATEGORIES.forEach((cat) => {
     const selected = !isAllMode && State.pickedCats.includes(cat.id);
-    const card = document.createElement('div');
-    card.className = 'cat-card' + (selected ? ' selected' : '');
+    const card = document.createElement('div'); card.className = 'cat-card' + (selected ? ' selected' : '');
     card.innerHTML = `<svg class="cat-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><circle cx="12" cy="12" r="10"/><polyline points="16 10 11 15 8 12"/></svg><div class="cat-icon">${cat.emoji}</div><div class="cat-name">${cat.name}</div>`;
     card.onclick = () => toggleCat(cat.id); grid.appendChild(card);
   });
@@ -1015,21 +747,16 @@ function toggleCat(id) {
   if (State.pickedCats.includes('all')) State.pickedCats = [];
   const idx = State.pickedCats.indexOf(id);
   if (idx > -1) State.pickedCats.splice(idx, 1);
-  else {
-    if (State.pickedCats.length >= 3) { toast('Max 3 categories'); return; }
-    State.pickedCats.push(id);
-  }
+  else { if (State.pickedCats.length >= 3) { toast('Max 3 categories'); return; } State.pickedCats.push(id); }
   haptic(15); renderCategories();
 }
 
 function updateCatUI() {
-  const count = State.pickedCats.length;
-  const badge = document.getElementById('catCount');
+  const count = State.pickedCats.length; const badge = document.getElementById('catCount');
   if (State.pickedCats.includes('all')) badge.textContent = 'All categories';
   else if (count === 0) badge.textContent = 'Pick up to 3, or skip';
   else badge.textContent = count + '/3 selected';
-  badge.classList.add('pop');
-  setTimeout(() => badge.classList.remove('pop'), 300);
+  badge.classList.add('pop'); setTimeout(() => badge.classList.remove('pop'), 300);
   document.getElementById('catBtn').disabled = count === 0;
 }
 
@@ -1040,36 +767,20 @@ async function loadFeed() {
   State.isFetching = true;
   try {
     const cards = [];
-    
     if (State.deepLinkCardId) {
-        try {
-            let { data: card } = await sb.from('blindspots').select('*').eq('id', State.deepLinkCardId).single();
-            if (!card) {
-                const { data: spot } = await sb.from('user_spots').select('*').eq('id', State.deepLinkCardId).single();
-                card = spot;
-            }
-            if (card) {
-                const formattedCard = { id: card.id, cat: card.category, emoji: getCategoryEmoji(card.category), what: card.what, why: card.why, layers: card.layers, funny: card.funny, author_name: card.author_name || null, source: card.user_id ? 'user_spot' : 'ai', creator_user_id: card.user_id || null, is_daily_locked: card.is_daily_locked || false, reactions: { blown: 0, knew: 0, love: 0 }, user_reactions: { blown: false, knew: false, love: false } };
-                cards.push(formattedCard);
-            }
-        } catch(e) {}
-        State.deepLinkCardId = null; 
+      try {
+        let { data: card } = await sb.from('blindspots').select('*').eq('id', State.deepLinkCardId).single();
+        if (!card) { const { data: spot } = await sb.from('user_spots').select('*').eq('id', State.deepLinkCardId).single(); card = spot; }
+        if (card) { const formattedCard = { id: card.id, cat: card.category, emoji: getCategoryEmoji(card.category), what: card.what, why: card.why, layers: card.layers, funny: card.funny, author_name: card.author_name || null, source: card.user_id ? 'user_spot' : 'ai', creator_user_id: card.user_id || null, is_daily_locked: card.is_daily_locked || false, reactions: { blown: 0, knew: 0, love: 0 }, user_reactions: { blown: false, knew: false, love: false } }; cards.push(formattedCard); }
+      } catch(e) {}
+      State.deepLinkCardId = null;
     }
-
-    for (let i = 0; i < 5; i++) {
-      try { const card = await fetchCardFromBackend(); if (card) cards.push(card); } catch (e) { break; }
-    }
+    for (let i = 0; i < 5; i++) { try { const card = await fetchCardFromBackend(); if (card) cards.push(card); } catch (e) { break; } }
     if (cards.length === 0) { State.isFetching = false; showFeedError(feed); return; }
-    State.cards = cards;
-    State.currentFeedIdx = 0;
-    State.isFetching = false;
+    State.cards = cards; State.currentFeedIdx = 0; State.isFetching = false;
     await loadUserReactions(cards.map(c => c.id));
     renderFeed();
-    
-    if (!localStorage.getItem('bs_install_prompted')) {
-      setTimeout(() => { showInstallPopup(); }, 1000);
-    }
-
+    if (!localStorage.getItem('bs_install_prompted')) { setTimeout(() => { showInstallPopup(); }, 1000); }
     fetch(CONFIG.GENERATE_URL, { method: 'POST', headers: { 'Authorization': 'Bearer ' + CONFIG.SUPABASE_KEY, 'Content-Type': 'application/json' }, body: JSON.stringify({ user_id: State.userId, count: 20 }) }).catch(e => {});
   } catch (err) { State.isFetching = false; showFeedError(feed); }
 }
@@ -1081,170 +792,64 @@ function showFeedError(feed) {
 async function fetchCardFromBackend() {
   const res = await fetch(CONFIG.GET_FEED_URL, { method: 'POST', headers: { 'Authorization': 'Bearer ' + CONFIG.SUPABASE_KEY, 'Content-Type': 'application/json' }, body: JSON.stringify({ user_id: State.userId }) });
   const data = await res.json();
-  if (data.message && data.message.includes('Loading')) {
-    fetch(CONFIG.GENERATE_URL, { method: 'POST', headers: { 'Authorization': 'Bearer ' + CONFIG.SUPABASE_KEY, 'Content-Type': 'application/json' }, body: JSON.stringify({ user_id: State.userId, count: 10 }) }).catch(e => {});
-    await new Promise(r => setTimeout(r, 2000));
-    return await fetchCardFromBackend();
-  }
+  if (data.message && data.message.includes('Loading')) { fetch(CONFIG.GENERATE_URL, { method: 'POST', headers: { 'Authorization': 'Bearer ' + CONFIG.SUPABASE_KEY, 'Content-Type': 'application/json' }, body: JSON.stringify({ user_id: State.userId, count: 10 }) }).catch(e => {}); await new Promise(r => setTimeout(r, 2000)); return await fetchCardFromBackend(); }
   if (data.error) throw new Error(data.error);
   if (!data.id) throw new Error('No card received');
-  
-  return {
-    id: data.id, cat: data.category, emoji: data.emoji, what: data.what, why: data.why,
-    layers: data.layers, funny: data.funny, author_name: data.author_name || null,
-    source: data.source || 'ai', creator_user_id: data.creator_user_id || null,
-    is_daily_locked: data.is_daily_locked || false,
-    is_promised: data.is_promised || false,
-    reactions: { blown: data.reaction_blown_count || 0, knew: data.reaction_knew_count || 0, love: data.reaction_love_count || 0 },
-    user_reactions: { blown: false, knew: false, love: false }
-  };
+  return { id: data.id, cat: data.category, emoji: data.emoji, what: data.what, why: data.why, layers: data.layers, funny: data.funny, author_name: data.author_name || null, source: data.source || 'ai', creator_user_id: data.creator_user_id || null, is_daily_locked: data.is_daily_locked || false, is_promised: data.is_promised || false, reactions: { blown: data.reaction_blown_count || 0, knew: data.reaction_knew_count || 0, love: data.reaction_love_count || 0 }, user_reactions: { blown: false, knew: false, love: false } };
 }
 
 async function loadUserReactions(cardIds) {
   if (!cardIds || cardIds.length === 0) return;
-  try {
-    const { data, error } = await sb.from('user_reactions').select('card_id, reaction_type').eq('user_id', State.userId).in('card_id', cardIds);
-    if (error) return;
-    const map = {};
-    (data || []).forEach(r => { if (!map[r.card_id]) map[r.card_id] = { blown: false, knew: false, love: false }; map[r.card_id][r.reaction_type] = true; });
-    State.cards.forEach(card => { if (card.id && map[card.id]) card.user_reactions = map[card.id]; });
-  } catch (err) { console.log('loadUserReactions exception:', err); }
+  try { const { data, error } = await sb.from('user_reactions').select('card_id, reaction_type').eq('user_id', State.userId).in('card_id', cardIds); if (error) return; const map = {}; (data || []).forEach(r => { if (!map[r.card_id]) map[r.card_id] = { blown: false, knew: false, love: false }; map[r.card_id][r.reaction_type] = true; }); State.cards.forEach(card => { if (card.id && map[card.id]) card.user_reactions = map[card.id]; }); } catch (err) {}
 }
 
 function renderFeed() {
-  const feed = document.getElementById('feedSwipe');
-  feed.innerHTML = '';
+  const feed = document.getElementById('feedSwipe'); feed.innerHTML = '';
   if (State.cards.length === 0) return;
   if (!localStorage.getItem('bs_onboard_done')) showSwipeOnboard();
-  const start = Math.max(0, State.currentFeedIdx - 1);
-  const end = Math.min(State.cards.length - 1, State.currentFeedIdx + 1);
+  const start = Math.max(0, State.currentFeedIdx - 1); const end = Math.min(State.cards.length - 1, State.currentFeedIdx + 1);
   for (let i = start; i <= end; i++) {
-    const card = State.cards[i];
-    const slide = document.createElement('div');
-    slide.className = 'slide';
-    if (i === State.currentFeedIdx) slide.classList.add('active');
-    else if (i < State.currentFeedIdx) slide.classList.add('prev');
-    else slide.classList.add('next');
-    slide.dataset.idx = i;
-    slide.innerHTML = buildFeedCard(card);
-    feed.appendChild(slide);
+    const card = State.cards[i]; const slide = document.createElement('div'); slide.className = 'slide';
+    if (i === State.currentFeedIdx) slide.classList.add('active'); else if (i < State.currentFeedIdx) slide.classList.add('prev'); else slide.classList.add('next');
+    slide.dataset.idx = i; slide.innerHTML = buildFeedCard(card); feed.appendChild(slide);
   }
-  const hint = document.createElement('div');
-  hint.className = 'swipe-hint'; hint.textContent = '↑ swipe for next';
-  feed.appendChild(hint);
+  const hint = document.createElement('div'); hint.className = 'swipe-hint'; hint.textContent = '↑ swipe for next'; feed.appendChild(hint);
 }
 
 function buildFeedCard(card) {
-  const isSaved = State.saved.includes(card.id);
-  const isUnlocked = State.unlockedCards.includes(card.id);
+  const isSaved = State.saved.includes(card.id); const isUnlocked = State.unlockedCards.includes(card.id);
   const showAuthor = card.source === 'user_spot' && card.author_name;
-  const reactions = card.reactions || { blown: 0, knew: 0, love: 0 };
-  const userReactions = card.user_reactions || { blown: false, knew: false, love: false };
+  const reactions = card.reactions || { blown: 0, knew: 0, love: 0 }; const userReactions = card.user_reactions || { blown: false, knew: false, love: false };
   const creatorTitleHtml = showAuthor ? `<span class="creator-title">✨ Discovered by ${card.author_name}</span>` : `<span class="creator-title">👁️ Discovered by Blindspot</span>`;
-  return `
-    <div class="feed-card">
-      <div class="feed-top">
-        <div class="feed-cat"><span class="emoji">${card.emoji}</span><span>${card.cat.toUpperCase().replace('_',' ')}</span></div>
-        <svg class="feed-bookmark ${isSaved ? 'saved' : ''}" viewBox="0 0 24 24" fill="${isSaved ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2" onclick="event.stopPropagation(); toggleSave('${card.id}')"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
-      </div>
-      <div class="feed-content-box">
-        <div class="feed-what">${card.what}</div>
-        <div class="feed-why">${card.why}</div>
-      </div>
-      <div class="feed-layers">${card.layers.map((l, i) => `<div class="layer-btn" onclick="openLayer('${card.id}', ${i})"><span class="l-icon">${l.icon}</span><span class="l-text">${l.title}</span>${!isUnlocked ? '<span class="l-lock">🔒</span>' : ''}</div>`).join('')}</div>
-      ${card.funny ? `<div class="feed-funny">💬 ${card.funny}</div>` : ''}
-      <div class="feed-discovered"><span class="dot"></span>${creatorTitleHtml}</div>
-      <div class="feed-reactions">
-        <div class="reaction ${userReactions.blown ? 'active' : ''}" data-type="blown" onclick="react('${card.id}', 'blown', this)"><span class="r-emoji">😲</span><span class="r-count">${reactions.blown || 0}</span></div>
-        <div class="reaction ${userReactions.knew ? 'active' : ''}" data-type="knew" onclick="react('${card.id}', 'knew', this)"><span class="r-emoji">💡</span><span class="r-count">${reactions.knew || 0}</span></div>
-        <div class="reaction ${userReactions.love ? 'active' : ''}" data-type="love" onclick="react('${card.id}', 'love', this)"><span class="r-emoji">❤️</span><span class="r-count">${reactions.love || 0}</span></div>
-        <div class="feed-spacer"></div>
-        <svg class="feed-action" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" onclick="openShare('${card.id}')"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
-      </div>
-    </div>`;
+  return `<div class="feed-card"><div class="feed-top"><div class="feed-cat"><span class="emoji">${card.emoji}</span><span>${card.cat.toUpperCase().replace('_',' ')}</span></div><svg class="feed-bookmark ${isSaved ? 'saved' : ''}" viewBox="0 0 24 24" fill="${isSaved ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2" onclick="event.stopPropagation(); toggleSave('${card.id}')"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></div><div class="feed-content-box"><div class="feed-what">${card.what}</div><div class="feed-why">${card.why}</div></div><div class="feed-layers">${card.layers.map((l, i) => `<div class="layer-btn" onclick="openLayer('${card.id}', ${i})"><span class="l-icon">${l.icon}</span><span class="l-text">${l.title}</span>${!isUnlocked ? '<span class="l-lock">🔒</span>' : ''}</div>`).join('')}</div>${card.funny ? `<div class="feed-funny">💬 ${card.funny}</div>` : ''}<div class="feed-discovered"><span class="dot"></span>${creatorTitleHtml}</div><div class="feed-reactions"><div class="reaction ${userReactions.blown ? 'active' : ''}" data-type="blown" onclick="react('${card.id}', 'blown', this)"><span class="r-emoji">😲</span><span class="r-count">${reactions.blown || 0}</span></div><div class="reaction ${userReactions.knew ? 'active' : ''}" data-type="knew" onclick="react('${card.id}', 'knew', this)"><span class="r-emoji">💡</span><span class="r-count">${reactions.knew || 0}</span></div><div class="reaction ${userReactions.love ? 'active' : ''}" data-type="love" onclick="react('${card.id}', 'love', this)"><span class="r-emoji">❤️</span><span class="r-count">${reactions.love || 0}</span></div><div class="feed-spacer"></div><svg class="feed-action" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" onclick="openShare('${card.id}')"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></div></div>`;
 }
 
 function bindSwipe() {
-  if (swipeInitialized) return;
-  swipeInitialized = true;
-  const feed = document.getElementById('feedSwipe');
-  let startY = 0, currentY = 0, isDragging = false, activeSlide = null;
+  if (swipeInitialized) return; swipeInitialized = true;
+  const feed = document.getElementById('feedSwipe'); let startY = 0, currentY = 0, isDragging = false, activeSlide = null;
   const start = (e) => { const y = e.touches ? e.touches[0].clientY : e.clientY; startY = y; currentY = y; isDragging = true; activeSlide = feed.querySelector('.slide.active'); if (activeSlide) activeSlide.classList.add('dragging'); };
-  const move = (e) => {
-    if (!isDragging || !activeSlide) return;
-    const y = e.touches ? e.touches[0].clientY : e.clientY;
-    currentY = y;
-    const dy = currentY - startY;
-    activeSlide.style.transform = 'translateY(' + dy + 'px) rotate(' + (dy * 0.02) + 'deg)';
-    activeSlide.style.opacity = 1 - Math.min(Math.abs(dy) / 400, 0.5);
-    if (dy > 0) {
-      const prevCard = feed.querySelector('.slide.prev');
-      if (prevCard) { const prevOffset = -100 + (dy / window.innerHeight) * 100; prevCard.style.transform = 'translateY(' + prevOffset + 'vh)'; prevCard.style.opacity = Math.min(dy / 400, 1); }
-    } else {
-      const nextCard = feed.querySelector('.slide.next');
-      if (nextCard) { const nextOffset = 100 - (Math.abs(dy) / window.innerHeight) * 100; nextCard.style.transform = 'translateY(' + nextOffset + 'vh)'; nextCard.style.opacity = Math.min(Math.abs(dy) / 400, 1); }
-    }
-  };
-  const end = () => {
-    if (!isDragging || !activeSlide) { isDragging = false; return; }
-    isDragging = false;
-    activeSlide.classList.remove('dragging');
-    const prevCard = feed.querySelector('.slide.prev');
-    const nextCard = feed.querySelector('.slide.next');
-    const dy = currentY - startY;
-    const threshold = 80;
-    if (dy < -threshold) { if (prevCard) { prevCard.style.transform = ''; prevCard.style.opacity = ''; } nextSlide(); }
-    else if (dy > threshold) { if (nextCard) { nextCard.style.transform = ''; nextCard.style.opacity = ''; } prevSlide(); }
-    else {
-      activeSlide.style.transform = ''; activeSlide.style.opacity = '';
-      if (prevCard) { prevCard.style.transform = ''; prevCard.style.opacity = ''; }
-      if (nextCard) { nextCard.style.transform = ''; nextCard.style.opacity = ''; }
-    }
-  };
-  feed.addEventListener('touchstart', start, { passive: true });
-  feed.addEventListener('touchmove', move, { passive: true });
-  feed.addEventListener('touchend', end);
-  feed.addEventListener('mousedown', start);
-  feed.addEventListener('mousemove', move);
-  feed.addEventListener('mouseup', end);
-  feed.addEventListener('mouseleave', end);
+  const move = (e) => { if (!isDragging || !activeSlide) return; const y = e.touches ? e.touches[0].clientY : e.clientY; currentY = y; const dy = currentY - startY; activeSlide.style.transform = 'translateY(' + dy + 'px) rotate(' + (dy * 0.02) + 'deg)'; activeSlide.style.opacity = 1 - Math.min(Math.abs(dy) / 400, 0.5); if (dy > 0) { const prevCard = feed.querySelector('.slide.prev'); if (prevCard) { const prevOffset = -100 + (dy / window.innerHeight) * 100; prevCard.style.transform = 'translateY(' + prevOffset + 'vh)'; prevCard.style.opacity = Math.min(dy / 400, 1); } } else { const nextCard = feed.querySelector('.slide.next'); if (nextCard) { const nextOffset = 100 - (Math.abs(dy) / window.innerHeight) * 100; nextCard.style.transform = 'translateY(' + nextOffset + 'vh)'; nextCard.style.opacity = Math.min(Math.abs(dy) / 400, 1); } } };
+  const end = () => { if (!isDragging || !activeSlide) { isDragging = false; return; } isDragging = false; activeSlide.classList.remove('dragging'); const prevCard = feed.querySelector('.slide.prev'); const nextCard = feed.querySelector('.slide.next'); const dy = currentY - startY; const threshold = 80; if (dy < -threshold) { if (prevCard) { prevCard.style.transform = ''; prevCard.style.opacity = ''; } nextSlide(); } else if (dy > threshold) { if (nextCard) { nextCard.style.transform = ''; nextCard.style.opacity = ''; } prevSlide(); } else { activeSlide.style.transform = ''; activeSlide.style.opacity = ''; if (prevCard) { prevCard.style.transform = ''; prevCard.style.opacity = ''; } if (nextCard) { nextCard.style.transform = ''; nextCard.style.opacity = ''; } } };
+  feed.addEventListener('touchstart', start, { passive: true }); feed.addEventListener('touchmove', move, { passive: true }); feed.addEventListener('touchend', end);
+  feed.addEventListener('mousedown', start); feed.addEventListener('mousemove', move); feed.addEventListener('mouseup', end); feed.addEventListener('mouseleave', end);
 }
 
 function swapSlideClasses() {
-  const feed = document.getElementById('feedSwipe');
-  const slides = feed.querySelectorAll('.slide');
-  slides.forEach(slide => {
-    const idx = parseInt(slide.dataset.idx);
-    slide.classList.remove('active', 'prev', 'next', 'dragging');
-    slide.style.transform = ''; slide.style.opacity = '';
-    if (idx === State.currentFeedIdx) slide.classList.add('active');
-    else if (idx < State.currentFeedIdx) slide.classList.add('prev');
-    else slide.classList.add('next');
-  });
-  const hasPrev = feed.querySelector('.slide.prev');
-  const needsPrev = State.currentFeedIdx - 1 >= 0;
+  const feed = document.getElementById('feedSwipe'); const slides = feed.querySelectorAll('.slide');
+  slides.forEach(slide => { const idx = parseInt(slide.dataset.idx); slide.classList.remove('active', 'prev', 'next', 'dragging'); slide.style.transform = ''; slide.style.opacity = ''; if (idx === State.currentFeedIdx) slide.classList.add('active'); else if (idx < State.currentFeedIdx) slide.classList.add('prev'); else slide.classList.add('next'); });
+  const hasPrev = feed.querySelector('.slide.prev'); const needsPrev = State.currentFeedIdx - 1 >= 0;
   if (needsPrev && !hasPrev) { renderFeed(); return; }
-  const hasNext = feed.querySelector('.slide.next');
-  const needsNext = State.currentFeedIdx + 1 < State.cards.length;
+  const hasNext = feed.querySelector('.slide.next'); const needsNext = State.currentFeedIdx + 1 < State.cards.length;
   if (needsNext && !hasNext) { renderFeed(); }
 }
 
 async function nextSlide() {
   if (!State.previousCards) State.previousCards = [];
   if (State.cards[State.currentFeedIdx]) { State.previousCards.push(State.cards[State.currentFeedIdx]); if (State.previousCards.length > 10) State.previousCards.shift(); }
-  if (State.currentFeedIdx < State.cards.length - 1) {
-    State.currentFeedIdx++; haptic(15); incrementSeen(); registerSwipeForOnboard(); swapSlideClasses();
-    if (State.cards.length - State.currentFeedIdx < 3) fetchMoreCardsInBackground();
-    return;
-  }
+  if (State.currentFeedIdx < State.cards.length - 1) { State.currentFeedIdx++; haptic(15); incrementSeen(); registerSwipeForOnboard(); swapSlideClasses(); if (State.cards.length - State.currentFeedIdx < 3) fetchMoreCardsInBackground(); return; }
   haptic(15); incrementSeen(); registerSwipeForOnboard();
-  const feed = document.getElementById('feedSwipe');
-  feed.innerHTML = `<div class="feed-loading" style="position:absolute;inset:0;background:transparent;"><div class="feed-loading-spinner"></div></div>`;
-  try {
-    const card = await fetchCardFromBackend();
-    if (card) { State.cards.push(card); State.currentFeedIdx++; renderFeed(); }
-    else { const prevCard = State.previousCards.pop(); if (prevCard) { State.cards = [prevCard]; State.currentFeedIdx = 0; renderFeed(); } toast('Network issue. Try again.'); }
-  } catch (err) { const prevCard = State.previousCards.pop(); if (prevCard) { State.cards = [prevCard]; State.currentFeedIdx = 0; renderFeed(); } else loadFeed(); }
+  const feed = document.getElementById('feedSwipe'); feed.innerHTML = `<div class="feed-loading" style="position:absolute;inset:0;background:transparent;"><div class="feed-loading-spinner"></div></div>`;
+  try { const card = await fetchCardFromBackend(); if (card) { State.cards.push(card); State.currentFeedIdx++; renderFeed(); } else { const prevCard = State.previousCards.pop(); if (prevCard) { State.cards = [prevCard]; State.currentFeedIdx = 0; renderFeed(); } toast('Network issue. Try again.'); } } catch (err) { const prevCard = State.previousCards.pop(); if (prevCard) { State.cards = [prevCard]; State.currentFeedIdx = 0; renderFeed(); } else loadFeed(); }
 }
 
 async function fetchMoreCardsInBackground() {
@@ -1261,8 +866,6 @@ function registerSwipeForOnboard() { if (localStorage.getItem('bs_onboard_done')
 
 async function openLayer(cardId, layerIdx) {
   const card = State.cards.find(c => c.id === cardId); if (!card) return;
-
-  alert("Is daily locked? " + card.is_daily_locked); // <--- TEMPORARY ALERT
 
   if (card.is_daily_locked) {
     State.currentCard = card;
@@ -1286,6 +889,14 @@ async function openLayer(cardId, layerIdx) {
         haptic(20);
         return;
       }
+      if (data.status === 'unlocked') {
+        if (!State.unlockedCards.includes(cardId)) {
+          State.unlockedCards.push(cardId);
+          localStorage.setItem('bs_unlocked', JSON.stringify(State.unlockedCards));
+        }
+        displayAllLayers(card);
+        return;
+      }
     } catch (e) { toast('Connection error. Try again.'); return; }
   }
 
@@ -1301,8 +912,7 @@ async function openLayer(cardId, layerIdx) {
 }
 
 function displayLayer(card, layerIdx) {
-  const layer = card.layers[layerIdx];
-  State.currentCard = card; State.currentLayerIdx = layerIdx;
+  const layer = card.layers[layerIdx]; State.currentCard = card; State.currentLayerIdx = layerIdx;
   document.getElementById('modalTitle').textContent = layer.icon + ' ' + layer.title;
   document.getElementById('modalBody').innerHTML = layer.body;
   const nextBtn = document.getElementById('modalNext');
@@ -1314,14 +924,10 @@ function displayLayer(card, layerIdx) {
 function displayAllLayers(card) {
   document.getElementById('modalTitle').textContent = '🔥 ' + card.what;
   let html = `<div style="font-size: 15px; font-weight: 800; color: #FF6B60; margin-bottom: 16px;">The truth is finally exposed.</div>`;
-  card.layers.forEach((l, i) => {
-    html += `<div style="margin-bottom: 20px; border-bottom: 1px solid rgba(157,78,221,0.3); padding-bottom: 16px;"><div style="font-size: 16px; font-weight: 800; color: #C77DFF; margin-bottom: 8px;">${l.icon} ${l.title}</div><div style="font-size: 14px; line-height: 1.6; color: #fff;">${l.body}</div></div>`;
-  });
+  card.layers.forEach((l, i) => { html += `<div style="margin-bottom: 20px; border-bottom: 1px solid rgba(157,78,221,0.3); padding-bottom: 16px;"><div style="font-size: 16px; font-weight: 800; color: #C77DFF; margin-bottom: 8px;">${l.icon} ${l.title}</div><div style="font-size: 14px; line-height: 1.6; color: #fff;">${l.body}</div></div>`; });
   if (card.funny) { html += `<div style="font-size: 14px; font-style: italic; color: #E0AAFF; margin-top: 10px;">💬 ${card.funny}</div>`; }
   document.getElementById('modalBody').innerHTML = html;
-  const nextBtn = document.getElementById('modalNext');
-  nextBtn.textContent = '✓ Close';
-  nextBtn.onclick = () => closeModal();
+  const nextBtn = document.getElementById('modalNext'); nextBtn.textContent = '✓ Close'; nextBtn.onclick = () => closeModal();
   document.getElementById('modal').classList.add('active'); haptic(50);
 }
 
@@ -1329,79 +935,47 @@ let melCountdownInterval = null;
 function showMelPopup(unlockAt) {
   document.getElementById('melPopup').classList.add('active');
   const target = new Date(unlockAt).getTime();
-  
   const updateCd = () => {
     const remaining = target - Date.now();
     if (remaining <= 0) {
       document.getElementById('melCountdown').textContent = '00:00:00';
       document.getElementById('melBtn').textContent = '🔥 Ready to Unlock';
-      document.getElementById('melBtn').onclick = () => {
-        closeMelPopup();
-        State._pendingViolenceUnlock = State.currentCard.id;
-        State._pendingViolenceLayer = State.currentLayerIdx;
-        document.getElementById('adPopup').classList.add('active');
-      };
-      clearInterval(melCountdownInterval);
-      return;
+      document.getElementById('melBtn').onclick = () => { closeMelPopup(); State._pendingViolenceUnlock = State.currentCard.id; State._pendingViolenceLayer = State.currentLayerIdx; document.getElementById('adPopup').classList.add('active'); };
+      clearInterval(melCountdownInterval); return;
     }
-    const h = Math.floor(remaining / 3600000);
-    const m = Math.floor((remaining % 3600000) / 60000);
-    const s = Math.floor((remaining % 60000) / 1000);
+    const h = Math.floor(remaining / 3600000); const m = Math.floor((remaining % 3600000) / 60000); const s = Math.floor((remaining % 60000) / 1000);
     document.getElementById('melCountdown').textContent = `${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
   };
-  
-  updateCd();
-  if (melCountdownInterval) clearInterval(melCountdownInterval);
-  melCountdownInterval = setInterval(updateCd, 1000);
-  haptic(30);
+  updateCd(); if (melCountdownInterval) clearInterval(melCountdownInterval); melCountdownInterval = setInterval(updateCd, 1000); haptic(30);
 }
 
-function closeMelPopup() {
-  document.getElementById('melPopup').classList.remove('active');
-  if (melCountdownInterval) { clearInterval(melCountdownInterval); melCountdownInterval = null; }
-}
+function closeMelPopup() { document.getElementById('melPopup').classList.remove('active'); if (melCountdownInterval) { clearInterval(melCountdownInterval); melCountdownInterval = null; } }
 
 function nextLayer() { if (!State.currentCard) return; const next = State.currentLayerIdx + 1; if (next < State.currentCard.layers.length) displayLayer(State.currentCard, next); }
 function closeModal() { document.getElementById('modal').classList.remove('active'); }
 
 function playAd() {
-  const btn = document.getElementById('adWatchBtn');
-  if (!btn) return;
-  btn.disabled = true;
-  let count = CONFIG.DEMO_AD_SECONDS;
-  btn.textContent = '⏱ ' + count;
+  const btn = document.getElementById('adWatchBtn'); if (!btn) return;
+  btn.disabled = true; let count = CONFIG.DEMO_AD_SECONDS; btn.textContent = '⏱ ' + count;
   const interval = setInterval(() => {
     count--;
-    if (count > 0) {
-      btn.textContent = '⏱ ' + count;
-    } else {
-      clearInterval(interval);
-      btn.textContent = '✓ Done';
-      setTimeout(() => { btn.disabled = false; btn.textContent = '▶ Watch Video'; }, 500);
-      completeAd();
-    }
+    if (count > 0) { btn.textContent = '⏱ ' + count; }
+    else { clearInterval(interval); btn.textContent = '✓ Done'; setTimeout(() => { btn.disabled = false; btn.textContent = '▶ Watch Video'; }, 500); completeAd(); }
   }, 1000);
 }
 
 function completeAd() {
   if (State._pendingViolenceUnlock) {
     document.getElementById('adPopup').classList.remove('active');
-    const btn = document.getElementById('adWatchBtn');
-    if (btn) { btn.disabled = false; btn.textContent = '▶ Watch Video'; }
-    unlockViolenceSpot();
-    return;
+    const btn = document.getElementById('adWatchBtn'); if (btn) { btn.disabled = false; btn.textContent = '▶ Watch Video'; }
+    unlockViolenceSpot(); return;
   }
-
-  const card = State.currentCard;
-  const layerIdx = State.currentLayerIdx;
-  const adPopup = document.getElementById('adPopup');
-  if (adPopup) adPopup.classList.remove('active');
+  const card = State.currentCard; const layerIdx = State.currentLayerIdx;
+  const adPopup = document.getElementById('adPopup'); if (adPopup) adPopup.classList.remove('active');
   if (!card) { toast('Error: no card'); return; }
   if (!card.layers || !card.layers[layerIdx]) { toast('Error: no layer'); return; }
   if (!State.unlockedCards.includes(card.id)) { State.unlockedCards.push(card.id); localStorage.setItem('bs_unlocked', JSON.stringify(State.unlockedCards)); }
-  displayLayer(card, layerIdx);
-  haptic(30);
-  toast('✅ Truth unlocked!');
+  displayLayer(card, layerIdx); haptic(30); toast('✅ Truth unlocked!');
   sb.from('user_behavior').insert({ user_id: State.userId, card_id: card.id, category: card.cat, action: 'unlock', weight: 10 }).catch(() => {});
   saveUnlock(card.id);
 }
@@ -1419,6 +993,11 @@ async function unlockViolenceSpot() {
     if (data.success) {
       const card = State.cards.find(c => c.id === cardId);
       if (card) { card.is_daily_locked = false; }
+      if (!State.unlockedCards.includes(cardId)) {
+        State.unlockedCards.push(cardId);
+        localStorage.setItem('bs_unlocked', JSON.stringify(State.unlockedCards));
+      }
+      saveUnlock(cardId);
       State._pendingViolenceUnlock = null;
       State._pendingViolenceLayer = null;
       displayAllLayers(card);
@@ -1432,8 +1011,7 @@ async function saveUnlock(cardId) { try { await sb.from('user_unlocked').insert(
 
 async function react(cardId, type, el) {
   haptic(20);
-  const card = State.cards.find(c => c.id === cardId);
-  if (!card) return;
+  const card = State.cards.find(c => c.id === cardId); if (!card) return;
   if (!card.user_reactions) card.user_reactions = { blown: false, knew: false, love: false };
   if (!card.reactions) card.reactions = { blown: 0, knew: 0, love: 0 };
   const wasActive = card.user_reactions[type];
@@ -1467,72 +1045,28 @@ function openShare(cardId) { shareCardId = cardId; document.getElementById('shar
 function closeShare() { document.getElementById('shareModal').classList.remove('active'); }
 
 function shareTo(platform) {
-  const card = State.cards.find(c => c.id === shareCardId);
-  if (!card) return;
-  
+  const card = State.cards.find(c => c.id === shareCardId); if (!card) return;
   const shareUrl = `${window.location.origin}${window.location.pathname}`;
   const text = `"${card.what}" — Blindspot app\n\nClick here to open Blindspot and see the truth: ${shareUrl}`;
-
-  if (platform === 'copy') {
-    navigator.clipboard?.writeText(text).then(() => toast('🔗 Link copied'));
-  } else if (platform === 'whatsapp') {
-    window.open('https://wa.me/?text=' + encodeURIComponent(text), '_blank');
-  } else if (platform === 'twitter') {
-    window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(text), '_blank');
-  } else if (platform === 'insta') {
-    navigator.clipboard?.writeText(text).then(() => toast('Link copied! Share to IG 📸'));
-  }
+  if (platform === 'copy') { navigator.clipboard?.writeText(text).then(() => toast('🔗 Link copied')); }
+  else if (platform === 'whatsapp') { window.open('https://wa.me/?text=' + encodeURIComponent(text), '_blank'); }
+  else if (platform === 'twitter') { window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(text), '_blank'); }
+  else if (platform === 'insta') { navigator.clipboard?.writeText(text).then(() => toast('Link copied! Share to IG 📸')); }
   closeShare();
 }
 
 async function doSearch(query) {
   const q = query.trim(); if (!q) return;
-  go('forge'); 
-  document.getElementById('forgeQuery').textContent = 'Query: "' + q + '"';
-  
+  go('forge'); document.getElementById('forgeQuery').textContent = 'Query: "' + q + '"';
   try {
     const { data: blindspots } = await sb.from('blindspots').select('*').ilike('what', `%${q}%`).limit(20);
     const { data: userSpots } = await sb.from('user_spots').select('*').ilike('what', `%${q}%`).limit(20);
-    
     let allResults = [];
-    
-    if (blindspots && blindspots.length > 0) {
-      allResults = allResults.concat(blindspots.map(c => ({
-        id: c.id, cat: c.category, emoji: getCategoryEmoji(c.category), what: c.what, why: c.why,
-        layers: c.layers, funny: c.funny, author_name: c.author_name || null,
-        source: 'ai', creator_user_id: c.user_id || null, is_daily_locked: false,
-        reactions: { blown: c.reaction_blown_count || 0, knew: c.reaction_knew_count || 0, love: c.reaction_love_count || 0 },
-        user_reactions: { blown: false, knew: false, love: false }
-      })));
-    }
-    
-    if (userSpots && userSpots.length > 0) {
-      allResults = allResults.concat(userSpots.map(c => ({
-        id: c.id, cat: c.category, emoji: getCategoryEmoji(c.category), what: c.what, why: c.why,
-        layers: c.layers, funny: c.funny, author_name: c.author_name || null,
-        source: 'user_spot', creator_user_id: c.user_id || null, is_daily_locked: c.is_daily_locked || false,
-        reactions: { blown: 0, knew: 0, love: 0 },
-        user_reactions: { blown: false, knew: false, love: false }
-      })));
-    }
-
-    if (allResults.length > 0) {
-      await loadUserReactions(allResults.map(c => c.id));
-      State.cards = allResults.concat(State.cards); 
-      State.currentFeedIdx = 0;
-      setTimeout(() => { 
-        switchTab('feed'); 
-        renderFeed(); 
-        toast(`Found ${allResults.length} spots for "${q}"`); 
-      }, 1500);
-    } else {
-      toast('No card found'); 
-      setTimeout(() => switchTab('search'), 800);
-    }
-  } catch (err) { 
-    toast('Search failed. Try again.'); 
-    setTimeout(() => switchTab('search'), 1500); 
-  }
+    if (blindspots && blindspots.length > 0) { allResults = allResults.concat(blindspots.map(c => ({ id: c.id, cat: c.category, emoji: getCategoryEmoji(c.category), what: c.what, why: c.why, layers: c.layers, funny: c.funny, author_name: c.author_name || null, source: 'ai', creator_user_id: c.user_id || null, is_daily_locked: false, reactions: { blown: c.reaction_blown_count || 0, knew: c.reaction_knew_count || 0, love: c.reaction_love_count || 0 }, user_reactions: { blown: false, knew: false, love: false } }))); }
+    if (userSpots && userSpots.length > 0) { allResults = allResults.concat(userSpots.map(c => ({ id: c.id, cat: c.category, emoji: getCategoryEmoji(c.category), what: c.what, why: c.why, layers: c.layers, funny: c.funny, author_name: c.author_name || null, source: 'user_spot', creator_user_id: c.user_id || null, is_daily_locked: c.is_daily_locked || false, reactions: { blown: 0, knew: 0, love: 0 }, user_reactions: { blown: false, knew: false, love: false } }))); }
+    if (allResults.length > 0) { await loadUserReactions(allResults.map(c => c.id)); State.cards = allResults.concat(State.cards); State.currentFeedIdx = 0; setTimeout(() => { switchTab('feed'); renderFeed(); toast(`Found ${allResults.length} spots for "${q}"`); }, 1500); }
+    else { toast('No card found'); setTimeout(() => switchTab('search'), 800); }
+  } catch (err) { toast('Search failed. Try again.'); setTimeout(() => switchTab('search'), 1500); }
 }
 
 function renderSaved() {
@@ -1545,15 +1079,9 @@ function renderSaved() {
 function openFromSaved(cardId) { const idx = State.cards.findIndex(c => c.id === cardId); if (idx > -1) { State.currentFeedIdx = idx; switchTab('feed'); setTimeout(() => renderFeed(), 50); } }
 
 function switchTab(tab) {
-  if (State.selectMode && tab !== 'mySpots') {
-    State.selectMode = false; State.selectedSpotIds = [];
-    const btn = document.getElementById('selectModeToggle'); const bar = document.getElementById('selectBar');
-    if (btn) { btn.textContent = 'Select'; btn.classList.remove('active'); }
-    if (bar) bar.classList.remove('active');
-  }
+  if (State.selectMode && tab !== 'mySpots') { State.selectMode = false; State.selectedSpotIds = []; const btn = document.getElementById('selectModeToggle'); const bar = document.getElementById('selectBar'); if (btn) { btn.textContent = 'Select'; btn.classList.remove('active'); } if (bar) bar.classList.remove('active'); }
   document.querySelectorAll('.nav-item').forEach(i => i.classList.toggle('active', i.dataset.tab === tab));
-  const nav = document.getElementById('bottomNav');
-  const contentPages = ['privacy', 'terms', 'about'];
+  const nav = document.getElementById('bottomNav'); const contentPages = ['privacy', 'terms', 'about'];
   if (contentPages.includes(tab)) nav.classList.add('hidden'); else nav.classList.remove('hidden');
   if (tab === 'feed') { go('feed'); if (State.cards.length === 0) loadFeed(); }
   else if (tab === 'search') go('search');
@@ -1570,12 +1098,8 @@ async function loadMySpots() {
   try {
     const { data, error } = await sb.from('user_spots').select('*').eq('user_id', State.userId).order('created_at', { ascending: false });
     if (error) { list.innerHTML = `<div class="empty-state"><p>Error: ${error.message}</p></div>`; return; }
-    const spotIds = (data || []).map(s => s.id);
-    let summaries = {};
-    if (spotIds.length > 0) {
-      const { data: stats } = await sb.from('card_reactions_summary').select('card_id, blown_count, knew_count, love_count').in('card_id', spotIds);
-      (stats || []).forEach(s => { summaries[s.card_id] = s; });
-    }
+    const spotIds = (data || []).map(s => s.id); let summaries = {};
+    if (spotIds.length > 0) { const { data: stats } = await sb.from('card_reactions_summary').select('card_id, blown_count, knew_count, love_count').in('card_id', spotIds); (stats || []).forEach(s => { summaries[s.card_id] = s; }); }
     const spotsWithStats = (data || []).map(s => ({ ...s, stats: summaries[s.id] || { blown_count: 0, knew_count: 0, love_count: 0 } }));
     renderMySpots(spotsWithStats);
   } catch (err) { list.innerHTML = `<div class="empty-state"><p>Failed to load your spots</p></div>`; }
@@ -1584,31 +1108,10 @@ async function loadMySpots() {
 function renderMySpots(spots) {
   const list = document.getElementById('mySpotsList'); const count = document.getElementById('mySpotsCount');
   count.textContent = spots.length + ' spot' + (spots.length !== 1 ? 's' : '');
-  if (spots.length === 0) {
-    list.innerHTML = `<div class="empty-state"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg><p>You haven't created any spots yet</p></div>`;
-    return;
-  }
+  if (spots.length === 0) { list.innerHTML = `<div class="empty-state"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg><p>You haven't created any spots yet</p></div>`; return; }
   list.innerHTML = spots.map(s => {
-    const stats = s.stats || { blown_count: 0, knew_count: 0, love_count: 0 };
-    const isSelected = State.selectedSpotIds.includes(s.id);
-    return `
-    <div class="saved-card ${State.selectMode ? 'selecting' : ''} ${isSelected ? 'selected-for-delete' : ''}" data-spot-id="${s.id}" onclick="handleSpotCardTap(event, '${s.id}')">
-      <div class="saved-checkbox" onclick="event.stopPropagation(); toggleSpotSelect('${s.id}')"></div>
-      <button class="saved-delete-btn" onclick="event.stopPropagation(); askDeleteSpot('${s.id}')" title="Delete">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
-      </button>
-      <button class="saved-edit-btn" onclick="event.stopPropagation(); openEditSpot('${s.id}')" title="Edit">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-      </button>
-      <div class="saved-cat">${getCategoryEmoji(s.category)} ${s.category.toUpperCase().replace('_',' ')}</div>
-      <div class="saved-title-text">${s.what}</div>
-      <div class="saved-date">Created ${formatTime(s.published_at || s.created_at)}</div>
-      <div style="display:flex;gap:16px;margin-top:10px;font-size:13px;color:var(--grey);align-items:center;">
-        <span>😲 ${stats.blown_count || 0}</span>
-        <span>💡 ${stats.knew_count || 0}</span>
-        <span>❤️ ${stats.love_count || 0}</span>
-      </div>
-    </div>`;
+    const stats = s.stats || { blown_count: 0, knew_count: 0, love_count: 0 }; const isSelected = State.selectedSpotIds.includes(s.id);
+    return `<div class="saved-card ${State.selectMode ? 'selecting' : ''} ${isSelected ? 'selected-for-delete' : ''}" data-spot-id="${s.id}" onclick="handleSpotCardTap(event, '${s.id}')"><div class="saved-checkbox" onclick="event.stopPropagation(); toggleSpotSelect('${s.id}')"></div><button class="saved-delete-btn" onclick="event.stopPropagation(); askDeleteSpot('${s.id}')" title="Delete"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button><button class="saved-edit-btn" onclick="event.stopPropagation(); openEditSpot('${s.id}')" title="Edit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></button><div class="saved-cat">${getCategoryEmoji(s.category)} ${s.category.toUpperCase().replace('_',' ')}</div><div class="saved-title-text">${s.what}</div><div class="saved-date">Created ${formatTime(s.published_at || s.created_at)}</div><div style="display:flex;gap:16px;margin-top:10px;font-size:13px;color:var(--grey);align-items:center;"><span>😲 ${stats.blown_count || 0}</span><span>💡 ${stats.knew_count || 0}</span><span>❤️ ${stats.love_count || 0}</span></div></div>`;
   }).join('');
 }
 
@@ -1623,11 +1126,7 @@ function toggleSpotSelect(spotId) {
   updateSelectBar();
 }
 
-function updateSelectBar() {
-  const count = State.selectedSpotIds.length;
-  const el = document.getElementById('selectCount'); if (el) el.textContent = count + ' selected';
-  const delBtn = document.getElementById('selectDeleteBtn'); if (delBtn) delBtn.disabled = count === 0;
-}
+function updateSelectBar() { const count = State.selectedSpotIds.length; const el = document.getElementById('selectCount'); if (el) el.textContent = count + ' selected'; const delBtn = document.getElementById('selectDeleteBtn'); if (delBtn) delBtn.disabled = count === 0; }
 
 function toggleSelectMode() {
   State.selectMode = !State.selectMode; State.selectedSpotIds = [];
@@ -1645,17 +1144,12 @@ function selectAllSpots() {
   updateSelectBar(); haptic(15);
 }
 
-function openBatchDeleteConfirm() {
-  if (State.selectedSpotIds.length === 0) return;
-  document.getElementById('batchDeleteCount').textContent = State.selectedSpotIds.length;
-  document.getElementById('batchDeleteModal').classList.add('active'); haptic(20);
-}
+function openBatchDeleteConfirm() { if (State.selectedSpotIds.length === 0) return; document.getElementById('batchDeleteCount').textContent = State.selectedSpotIds.length; document.getElementById('batchDeleteModal').classList.add('active'); haptic(20); }
 function cancelBatchDelete() { document.getElementById('batchDeleteModal').classList.remove('active'); }
 
 async function confirmBatchDelete() {
   document.getElementById('batchDeleteModal').classList.remove('active');
-  const ids = [...State.selectedSpotIds];
-  if (ids.length === 0) return;
+  const ids = [...State.selectedSpotIds]; if (ids.length === 0) return;
   toast(`🗑️ Deleting ${ids.length} spots...`);
   let success = 0, failed = 0;
   for (const id of ids) {
@@ -1680,10 +1174,8 @@ function openMySpot(spotId) {
   let idx = State.cards.findIndex(c => c.id === spotId);
   if (idx > -1) { State.currentFeedIdx = idx; switchTab('feed'); setTimeout(() => renderFeed(), 50); return; }
   sb.from('user_spots').select('*').eq('id', spotId).single().then(({ data, error }) => {
-    if (data) {
-      const formattedSpot = { id: data.id, cat: data.category, emoji: getCategoryEmoji(data.category), what: data.what, why: data.why, layers: data.layers, funny: data.funny, author_name: data.author_name, source: "user_spot", creator_user_id: data.user_id, is_daily_locked: data.is_daily_locked || false, reactions: { blown: 0, knew: 0, love: 0 }, user_reactions: { blown: false, knew: false, love: false } };
-      State.cards.unshift(formattedSpot); State.currentFeedIdx = 0; switchTab('feed'); setTimeout(() => renderFeed(), 50);
-    } else { toast('Could not load spot'); }
+    if (data) { const formattedSpot = { id: data.id, cat: data.category, emoji: getCategoryEmoji(data.category), what: data.what, why: data.why, layers: data.layers, funny: data.funny, author_name: data.author_name, source: "user_spot", creator_user_id: data.user_id, is_daily_locked: data.is_daily_locked || false, reactions: { blown: 0, knew: 0, love: 0 }, user_reactions: { blown: false, knew: false, love: false } }; State.cards.unshift(formattedSpot); State.currentFeedIdx = 0; switchTab('feed'); setTimeout(() => renderFeed(), 50); }
+    else { toast('Could not load spot'); }
   });
 }
 
@@ -1693,8 +1185,7 @@ function cancelDeleteSpot() { pendingDeleteSpotId = null; document.getElementByI
 
 async function confirmDeleteSpot() {
   const spotId = pendingDeleteSpotId; if (!spotId) return;
-  document.getElementById('deleteSpotModal').classList.remove('active');
-  toast('🗑️ Deleting spot...');
+  document.getElementById('deleteSpotModal').classList.remove('active'); toast('🗑️ Deleting spot...');
   try {
     const { error: spotErr } = await sb.from('user_spots').delete().eq('id', spotId).eq('user_id', State.userId);
     if (spotErr) { toast('Failed: ' + spotErr.message); pendingDeleteSpotId = null; return; }
@@ -1704,8 +1195,7 @@ async function confirmDeleteSpot() {
     State.cards = State.cards.filter(c => c.id !== spotId);
     State.unlockedCards = State.unlockedCards.filter(id => id !== spotId);
     localStorage.setItem('bs_unlocked', JSON.stringify(State.unlockedCards));
-    toast('✅ Spot deleted'); haptic(40);
-    pendingDeleteSpotId = null; setTimeout(() => loadMySpots(), 400);
+    toast('✅ Spot deleted'); haptic(40); pendingDeleteSpotId = null; setTimeout(() => loadMySpots(), 400);
   } catch (err) { toast('Failed to delete'); pendingDeleteSpotId = null; }
 }
 
@@ -1714,22 +1204,13 @@ async function openEditSpot(spotId) {
   try {
     const { data, error } = await sb.from('user_spots').select('*').eq('id', spotId).eq('user_id', State.userId).single();
     if (error || !data) { toast('Could not load spot'); return; }
-    State.csStep = 1; State.csCategory = data.category;
-    State.editingSpotId = spotId; State.editingSpotData = data;
+    State.csStep = 1; State.csCategory = data.category; State.editingSpotId = spotId; State.editingSpotData = data;
     ['csSpotName','csWhat','csWhy','csLayer1','csLayer2','csLayer3','csLayer4','csFunny','csAuthor'].forEach(id => { const el = document.getElementById(id); if (el) el.value = ''; });
-    document.getElementById('csSpotName').value = data.spot_name || '';
-    document.getElementById('csNameCount').textContent = (data.spot_name || '').length;
-    document.getElementById('csWhat').value = data.what || '';
-    document.getElementById('csWhatCount').textContent = (data.what || '').length;
-    document.getElementById('csWhy').value = data.why || '';
-    document.getElementById('csWhyCount').textContent = (data.why || '').length;
-    const layers = data.layers || [];
-    document.getElementById('csLayer1').value = layers[0]?.body || '';
-    document.getElementById('csLayer2').value = layers[1]?.body || '';
-    document.getElementById('csLayer3').value = layers[2]?.body || '';
-    document.getElementById('csLayer4').value = layers[3]?.body || '';
-    document.getElementById('csFunny').value = data.funny || '';
-    document.getElementById('csAuthor').value = data.author_name || '';
+    document.getElementById('csSpotName').value = data.spot_name || ''; document.getElementById('csNameCount').textContent = (data.spot_name || '').length;
+    document.getElementById('csWhat').value = data.what || ''; document.getElementById('csWhatCount').textContent = (data.what || '').length;
+    document.getElementById('csWhy').value = data.why || ''; document.getElementById('csWhyCount').textContent = (data.why || '').length;
+    const layers = data.layers || []; document.getElementById('csLayer1').value = layers[0]?.body || ''; document.getElementById('csLayer2').value = layers[1]?.body || ''; document.getElementById('csLayer3').value = layers[2]?.body || ''; document.getElementById('csLayer4').value = layers[3]?.body || '';
+    document.getElementById('csFunny').value = data.funny || ''; document.getElementById('csAuthor').value = data.author_name || '';
     renderCsStep(); go('createSpot'); toast('✏️ Edit mode — make your changes');
   } catch (err) { toast('Failed to load spot'); }
 }
@@ -1738,312 +1219,133 @@ function openBulkPaste() { go('bulkPaste'); }
 function closeBulkPaste() { switchTab('profile'); }
 
 async function publishBulk() {
-  const textarea = document.getElementById('bulkTextarea');
-  const resultDiv = document.getElementById('bulkResult');
-  const progressBox = document.getElementById('bulkProgressBox');
-  const progressFill = document.getElementById('bulkProgressFill');
-  const progressLabel = document.getElementById('bulkProgressLabel');
-  const progressCurrent = document.getElementById('bulkProgressCurrent');
-  const progressTotal = document.getElementById('bulkProgressTotal');
-  const publishBtn = document.getElementById('bulkPublishBtn');
-  
-  const text = textarea.value.trim();
-  if (!text) { toast('Paste some spots first'); return; }
+  const textarea = document.getElementById('bulkTextarea'); const resultDiv = document.getElementById('bulkResult'); const progressBox = document.getElementById('bulkProgressBox'); const progressFill = document.getElementById('bulkProgressFill'); const progressLabel = document.getElementById('bulkProgressLabel'); const progressCurrent = document.getElementById('bulkProgressCurrent'); const progressTotal = document.getElementById('bulkProgressTotal'); const publishBtn = document.getElementById('bulkPublishBtn');
+  const text = textarea.value.trim(); if (!text) { toast('Paste some spots first'); return; }
   const spots = parseBulkText(text, false);
-  
   if (spots.length === 0) { toast('No valid spots found. Check format.'); return; }
   if (spots.length > 200) { resultDiv.className = 'bulk-result active error'; resultDiv.textContent = `⚠️ Too many spots! Max 200 per batch.`; return; }
-  
-  progressBox.classList.add('active'); resultDiv.classList.remove('active', 'success', 'error');
-  progressLabel.textContent = 'Checking duplicates...'; publishBtn.disabled = true;
-
+  progressBox.classList.add('active'); resultDiv.classList.remove('active', 'success', 'error'); progressLabel.textContent = 'Checking duplicates...'; publishBtn.disabled = true;
   let existingSpots = [];
   try { const { data } = await sb.from('user_spots').select('what, why').eq('user_id', State.userId); existingSpots = data || []; } catch (err) {}
-  
   function normalize(text) { if (!text) return ''; return text.toLowerCase().replace(/[^\w\s]/g, '').replace(/\b(the|a|an|only|just|is|are|was|were|be|been|being|of|to|in|on|at|for|and|or|but|with|by|from)\b/g, '').replace(/\s+/g, ' ').trim(); }
   const existingHooks = new Set(); existingSpots.forEach(s => { if (s.what) existingHooks.add(normalize(s.what)); });
-  
   const uniqueSpots = []; const duplicates = []; const seenInBatch = new Set();
-  
-  for (const spot of spots) {
-    const n = normalize(spot.hook);
-    if (existingHooks.has(n)) { duplicates.push({ spot, reason: 'Already exists (similar hook)' }); continue; }
-    if (seenInBatch.has(n)) { duplicates.push({ spot, reason: 'Duplicate in this batch' }); continue; }
-    seenInBatch.add(n); uniqueSpots.push(spot);
-  }
-  
+  for (const spot of spots) { const n = normalize(spot.hook); if (existingHooks.has(n)) { duplicates.push({ spot, reason: 'Already exists (similar hook)' }); continue; } if (seenInBatch.has(n)) { duplicates.push({ spot, reason: 'Duplicate in this batch' }); continue; } seenInBatch.add(n); uniqueSpots.push(spot); }
   if (uniqueSpots.length === 0) { resultDiv.className = 'bulk-result active error'; resultDiv.textContent = `❌ All ${duplicates.length} spots look like duplicates!`; progressLabel.textContent = 'Nothing to publish'; publishBtn.disabled = false; return; }
-  
-  progressTotal.textContent = uniqueSpots.length; progressCurrent.textContent = '0';
-  progressFill.style.width = '0%'; progressLabel.textContent = `Publishing ${uniqueSpots.length} spot${uniqueSpots.length !== 1 ? 's' : ''}...`;
-  
+  progressTotal.textContent = uniqueSpots.length; progressCurrent.textContent = '0'; progressFill.style.width = '0%'; progressLabel.textContent = `Publishing ${uniqueSpots.length} spot${uniqueSpots.length !== 1 ? 's' : ''}...`;
   let successCount = 0, failCount = 0; const errors = [];
-  
   for (let i = 0; i < uniqueSpots.length; i++) {
-    const spot = uniqueSpots[i];
-    progressLabel.textContent = `Publishing spot ${i + 1} of ${uniqueSpots.length}...`;
-    try {
-      const res = await fetch(CONFIG.CREATE_SPOT_URL, { method: 'POST', headers: { 'Authorization': 'Bearer ' + CONFIG.SUPABASE_KEY, 'Content-Type': 'application/json' }, body: JSON.stringify({ user_id: State.userId, author_name: spot.author_name || null, spot_name: spot.spot_name || spot.hook.substring(0, 60), hook_style: 'Custom', what: spot.hook, why: spot.twist, layers: spot.layers, funny: spot.funny || null, category: spot.category, is_daily_locked: false }) });
-      const data = await res.json();
-      if (data.approved) { successCount++; } else { failCount++; errors.push(`Spot ${i + 1}: ${data.error || data.reason || 'Failed'}`); }
-    } catch (err) { failCount++; errors.push(`Spot ${i + 1}: ${err.message}`); }
-    const pct = Math.round(((i + 1) / uniqueSpots.length) * 100);
-    progressFill.style.width = pct + '%'; progressCurrent.textContent = i + 1;
+    const spot = uniqueSpots[i]; progressLabel.textContent = `Publishing spot ${i + 1} of ${uniqueSpots.length}...`;
+    try { const res = await fetch(CONFIG.CREATE_SPOT_URL, { method: 'POST', headers: { 'Authorization': 'Bearer ' + CONFIG.SUPABASE_KEY, 'Content-Type': 'application/json' }, body: JSON.stringify({ user_id: State.userId, author_name: spot.author_name || null, spot_name: spot.spot_name || spot.hook.substring(0, 60), hook_style: 'Custom', what: spot.hook, why: spot.twist, layers: spot.layers, funny: spot.funny || null, category: spot.category, is_daily_locked: false }) }); const data = await res.json(); if (data.approved) { successCount++; } else { failCount++; errors.push(`Spot ${i + 1}: ${data.error || data.reason || 'Failed'}`); } } catch (err) { failCount++; errors.push(`Spot ${i + 1}: ${err.message}`); }
+    const pct = Math.round(((i + 1) / uniqueSpots.length) * 100); progressFill.style.width = pct + '%'; progressCurrent.textContent = i + 1;
   }
-  
-  publishBtn.disabled = false; progressLabel.textContent = 'Done!';
-  const dupCount = duplicates.length;
-  
+  publishBtn.disabled = false; progressLabel.textContent = 'Done!'; const dupCount = duplicates.length;
   if (failCount === 0 && dupCount === 0) { resultDiv.className = 'bulk-result active success'; resultDiv.textContent = `✅ All ${successCount} spots published successfully!`; textarea.value = ''; }
-  else {
-    resultDiv.className = 'bulk-result active error';
-    let message = `⚠️ ${successCount} published, ${failCount} failed`;
-    if (dupCount > 0) message += `, ${dupCount} duplicates skipped`;
-    message += '\n';
-    if (dupCount > 0) { message += `\n🚫 Duplicates:\n${duplicates.slice(0, 5).map(d => `• "${d.spot.hook.substring(0, 40)}..." — ${d.reason}`).join('\n')}`; if (duplicates.length > 5) message += `\n... and ${duplicates.length - 5} more`; }
-    if (errors.length > 0) { message += `\n\n❌ Errors:\n${errors.slice(0, 5).join('\n')}`; if (errors.length > 5) message += `\n...`; }
-    if (successCount > 0) textarea.value = '';
-    resultDiv.textContent = message;
-  }
+  else { resultDiv.className = 'bulk-result active error'; let message = `⚠️ ${successCount} published, ${failCount} failed`; if (dupCount > 0) message += `, ${dupCount} duplicates skipped`; message += '\n'; if (dupCount > 0) { message += `\n🚫 Duplicates:\n${duplicates.slice(0, 5).map(d => `• "${d.spot.hook.substring(0, 40)}..." — ${d.reason}`).join('\n')}`; if (duplicates.length > 5) message += `\n... and ${duplicates.length - 5} more`; } if (errors.length > 0) { message += `\n\n❌ Errors:\n${errors.slice(0, 5).join('\n')}`; if (errors.length > 5) message += `\n...`; } if (successCount > 0) textarea.value = ''; resultDiv.textContent = message; }
 }
 
 async function publishViolenceBulk() {
-  const textarea = document.getElementById('bulkViolenceTextarea');
-  const resultDiv = document.getElementById('violenceResult');
-  const progressBox = document.getElementById('violenceProgressBox');
-  const progressFill = document.getElementById('violenceProgressFill');
-  const progressLabel = document.getElementById('violenceProgressLabel');
-  const progressCurrent = document.getElementById('violenceProgressCurrent');
-  const progressTotal = document.getElementById('violenceProgressTotal');
-  const publishBtn = document.getElementById('violencePublishBtn');
-
-  const text = textarea.value.trim();
-  if (!text) { toast('Paste some spots first'); return; }
-
+  const textarea = document.getElementById('bulkViolenceTextarea'); const resultDiv = document.getElementById('violenceResult'); const progressBox = document.getElementById('violenceProgressBox'); const progressFill = document.getElementById('violenceProgressFill'); const progressLabel = document.getElementById('violenceProgressLabel'); const progressCurrent = document.getElementById('violenceProgressCurrent'); const progressTotal = document.getElementById('violenceProgressTotal'); const publishBtn = document.getElementById('violencePublishBtn');
+  const text = textarea.value.trim(); if (!text) { toast('Paste some spots first'); return; }
   const spots = parseBulkText(text, true);
   if (spots.length === 0) { toast('No valid spots found.'); return; }
   if (spots.length > 200) { resultDiv.className = 'bulk-result active error'; resultDiv.textContent = `⚠️ Too many spots! Max 200 per batch.`; return; }
-
-  progressBox.classList.add('active'); resultDiv.classList.remove('active', 'success', 'error');
-  progressLabel.textContent = 'Checking duplicates...'; publishBtn.disabled = true;
-
+  progressBox.classList.add('active'); resultDiv.classList.remove('active', 'success', 'error'); progressLabel.textContent = 'Checking duplicates...'; publishBtn.disabled = true;
   let existingSpots = [];
   try { const { data } = await sb.from('user_spots').select('what').eq('user_id', State.userId); existingSpots = data || []; } catch (err) {}
-
   function normalize(txt) { if (!txt) return ''; return txt.toLowerCase().replace(/[^\w\s]/g, '').replace(/\b(the|a|an|is|are|was|were|be|of|to|in|on|at|for|and|or|but|with|by|from)\b/g, '').replace(/\s+/g, ' ').trim(); }
   const existingHooks = new Set(); existingSpots.forEach(s => { if (s.what) existingHooks.add(normalize(s.what)); });
-  
   const uniqueSpots = []; const duplicates = []; const seenInBatch = new Set();
-  
-  for (const spot of spots) {
-    const n = normalize(spot.hook);
-    if (existingHooks.has(n)) { duplicates.push({ spot, reason: 'Already exists' }); continue; }
-    if (seenInBatch.has(n)) { duplicates.push({ spot, reason: 'Duplicate in batch' }); continue; }
-    seenInBatch.add(n); uniqueSpots.push(spot);
-  }
-
+  for (const spot of spots) { const n = normalize(spot.hook); if (existingHooks.has(n)) { duplicates.push({ spot, reason: 'Already exists' }); continue; } if (seenInBatch.has(n)) { duplicates.push({ spot, reason: 'Duplicate in batch' }); continue; } seenInBatch.add(n); uniqueSpots.push(spot); }
   if (uniqueSpots.length === 0) { resultDiv.className = 'bulk-result active error'; resultDiv.textContent = `❌ All ${duplicates.length} spots look like duplicates!`; progressLabel.textContent = 'Nothing to publish'; publishBtn.disabled = false; return; }
-
-  progressTotal.textContent = uniqueSpots.length; progressCurrent.textContent = '0';
-  progressFill.style.width = '0%'; progressLabel.textContent = `Publishing ${uniqueSpots.length} spot${uniqueSpots.length !== 1 ? 's' : ''}...`;
-
+  progressTotal.textContent = uniqueSpots.length; progressCurrent.textContent = '0'; progressFill.style.width = '0%'; progressLabel.textContent = `Publishing ${uniqueSpots.length} spot${uniqueSpots.length !== 1 ? 's' : ''}...`;
   let successCount = 0, failCount = 0; const errors = [];
-
   for (let i = 0; i < uniqueSpots.length; i++) {
-    const spot = uniqueSpots[i];
-    progressLabel.textContent = `Publishing spot ${i + 1} of ${uniqueSpots.length}...`;
-    try {
-      const res = await fetch(CONFIG.CREATE_SPOT_URL, { 
-        method: 'POST', 
-        headers: { 'Authorization': 'Bearer ' + CONFIG.SUPABASE_KEY, 'Content-Type': 'application/json' }, 
-        body: JSON.stringify({ 
-          user_id: State.userId, 
-          author_name: spot.author_name || null, 
-          spot_name: spot.spot_name || spot.hook.substring(0, 60), 
-          hook_style: 'Custom', 
-          what: spot.hook, 
-          why: spot.twist, 
-          layers: spot.layers, 
-          funny: spot.funny || null, 
-          category: spot.category,
-          is_daily_locked: true
-        }) 
-      });
-      const data = await res.json();
-      if (data.approved) { successCount++; } else { failCount++; errors.push(`Spot ${i + 1}: ${data.error || data.reason || 'Failed'}`); }
-    } catch (err) { failCount++; errors.push(`Spot ${i + 1}: ${err.message}`); }
-    const pct = Math.round(((i + 1) / uniqueSpots.length) * 100);
-    progressFill.style.width = pct + '%'; progressCurrent.textContent = i + 1;
+    const spot = uniqueSpots[i]; progressLabel.textContent = `Publishing spot ${i + 1} of ${uniqueSpots.length}...`;
+    try { const res = await fetch(CONFIG.CREATE_SPOT_URL, { method: 'POST', headers: { 'Authorization': 'Bearer ' + CONFIG.SUPABASE_KEY, 'Content-Type': 'application/json' }, body: JSON.stringify({ user_id: State.userId, author_name: spot.author_name || null, spot_name: spot.spot_name || spot.hook.substring(0, 60), hook_style: 'Custom', what: spot.hook, why: spot.twist, layers: spot.layers, funny: spot.funny || null, category: spot.category, is_daily_locked: true }) }); const data = await res.json(); if (data.approved) { successCount++; } else { failCount++; errors.push(`Spot ${i + 1}: ${data.error || data.reason || 'Failed'}`); } } catch (err) { failCount++; errors.push(`Spot ${i + 1}: ${err.message}`); }
+    const pct = Math.round(((i + 1) / uniqueSpots.length) * 100); progressFill.style.width = pct + '%'; progressCurrent.textContent = i + 1;
   }
-
   publishBtn.disabled = false; progressLabel.textContent = 'Done!';
-  
-  if (failCount === 0 && duplicates.length === 0) { 
-    resultDiv.className = 'bulk-result active success'; 
-    resultDiv.textContent = `✅ All ${successCount} Violence spots published successfully!`; 
-    textarea.value = ''; 
-  } else {
-    resultDiv.className = 'bulk-result active error';
-    let message = `⚠️ ${successCount} published, ${failCount} failed`;
-    if (duplicates.length > 0) message += `, ${duplicates.length} duplicates skipped`;
-    
-    if (errors.length > 0) { message += `\n\n❌ Errors:\n${errors.slice(0, 5).join('\n')}`; }
-    if (successCount > 0) textarea.value = '';
-    resultDiv.textContent = message;
-  }
+  if (failCount === 0 && duplicates.length === 0) { resultDiv.className = 'bulk-result active success'; resultDiv.textContent = `✅ All ${successCount} Violence spots published successfully!`; textarea.value = ''; }
+  else { resultDiv.className = 'bulk-result active error'; let message = `⚠️ ${successCount} published, ${failCount} failed`; if (duplicates.length > 0) message += `, ${duplicates.length} duplicates skipped`; if (errors.length > 0) { message += `\n\n❌ Errors:\n${errors.slice(0, 5).join('\n')}`; } if (successCount > 0) textarea.value = ''; resultDiv.textContent = message; }
 }
 
 function parseBulkText(text, defaultViolence = false) {
-  const blocks = text.split('---SPOT---').filter(b => b.trim().length > 0);
-  const spots = [];
+  const blocks = text.split('---SPOT---').filter(b => b.trim().length > 0); const spots = [];
   const validCats = ['dating','attachment','heartbreak','love','relationship','intimacy','marriage','health','money','business','travel','tech','dark_psychology','confidence','social_skills','family_trauma'];
   for (const block of blocks) {
-    const lines = block.split('\n');
-    const data = {};
-    for (let line of lines) {
-      line = line.trim(); if (!line) continue;
-      const colonIdx = line.indexOf(':'); if (colonIdx === -1) continue;
-      const key = line.substring(0, colonIdx).trim().toLowerCase();
-      const value = line.substring(colonIdx + 1).trim();
-      data[key] = value;
-    }
-    const category = (data['category'] || '').toLowerCase();
-    if (!category || !validCats.includes(category)) continue;
-    const hook = data['hook'] || ''; const twist = data['twist'] || '';
-    if (!hook || !twist) continue;
-    const layers = [
-      { icon: '🔍', title: 'The Secret Truth', body: data['layer1'] || '' },
-      { icon: '🧠', title: 'The Secret Reason', body: data['layer2'] || '' },
-      { icon: '⚠️', title: 'The Secret Consequences', body: data['layer3'] || '' },
-      { icon: '✅', title: 'The Secret Solution', body: data['layer4'] || '' }
-    ];
+    const lines = block.split('\n'); const data = {};
+    for (let line of lines) { line = line.trim(); if (!line) continue; const colonIdx = line.indexOf(':'); if (colonIdx === -1) continue; const key = line.substring(0, colonIdx).trim().toLowerCase(); const value = line.substring(colonIdx + 1).trim(); data[key] = value; }
+    const category = (data['category'] || '').toLowerCase(); if (!category || !validCats.includes(category)) continue;
+    const hook = data['hook'] || ''; const twist = data['twist'] || ''; if (!hook || !twist) continue;
+    const layers = [{ icon: '🔍', title: 'The Secret Truth', body: data['layer1'] || '' }, { icon: '🧠', title: 'The Secret Reason', body: data['layer2'] || '' }, { icon: '⚠️', title: 'The Secret Consequences', body: data['layer3'] || '' }, { icon: '✅', title: 'The Secret Solution', body: data['layer4'] || '' }];
     if (layers.some(l => !l.body)) continue;
     spots.push({ spot_name: data['spotname'] || hook.substring(0, 60), category: category, author_name: data['author'] || null, hook: hook, twist: twist, layers: layers, funny: data['funny'] || null, is_daily_locked: defaultViolence });
   }
   return spots;
 }
 
-function renderProfile() {
-  document.getElementById('statSeen').textContent = State.seen;
-  document.getElementById('statBlown').textContent = State.blown;
-  document.getElementById('statSaved').textContent = State.saved.length;
-}
+function renderProfile() { document.getElementById('statSeen').textContent = State.seen; document.getElementById('statBlown').textContent = State.blown; document.getElementById('statSaved').textContent = State.saved.length; }
 
 function showLogoutConfirm() { document.getElementById('logoutModal').classList.add('active'); haptic(20); }
 async function confirmLogout() {
   document.getElementById('logoutModal').classList.remove('active'); toast('🗑️ Deleting your data...');
-  try {
-    await sb.from('user_preferences').delete().eq('user_id', State.userId);
-    await sb.from('user_seen').delete().eq('user_id', State.userId);
-    await sb.from('user_reactions').delete().eq('user_id', State.userId);
-  } catch (err) {}
+  try { await sb.from('user_preferences').delete().eq('user_id', State.userId); await sb.from('user_seen').delete().eq('user_id', State.userId); await sb.from('user_reactions').delete().eq('user_id', State.userId); } catch (err) {}
   localStorage.clear(); setTimeout(() => location.reload(), 800);
 }
 
 function openCreateSpot() {
-  State.csStep = 1; State.csCategory = null;
-  State.editingSpotId = null; State.editingSpotData = null;
+  State.csStep = 1; State.csCategory = null; State.editingSpotId = null; State.editingSpotData = null;
   ['csSpotName','csWhat','csWhy','csLayer1','csLayer2','csLayer3','csLayer4','csFunny','csAuthor'].forEach(id => { const el = document.getElementById(id); if (el) el.value = ''; });
-  document.getElementById('csNameCount').textContent = '0';
-  document.getElementById('csWhatCount').textContent = '0';
-  document.getElementById('csWhyCount').textContent = '0';
+  document.getElementById('csNameCount').textContent = '0'; document.getElementById('csWhatCount').textContent = '0'; document.getElementById('csWhyCount').textContent = '0';
   renderCsStep(); go('createSpot');
 }
 function closeCreateSpot() { switchTab('feed'); }
 
 function renderCsStep() {
   document.querySelectorAll('.cs-step').forEach(s => s.classList.remove('active'));
-  const step = document.querySelector(`.cs-step[data-step="${State.csStep}"]`);
-  if (step) step.classList.add('active');
-  const badge = document.getElementById('csStepBadge');
-  const fill = document.getElementById('csProgressFill');
-  const footer = document.getElementById('csFooter');
-  const nextBtn = document.getElementById('csNextBtn');
-  const backBtn = document.getElementById('csBackBtn');
-  const titleEl = document.getElementById('csScreenTitle');
-  if (State.csStep <= 3) {
-    badge.textContent = State.csStep + '/3';
-    fill.style.width = (State.csStep * 33.33) + '%';
-    footer.style.display = 'flex';
-    backBtn.style.display = State.csStep > 1 ? 'flex' : 'none';
-    nextBtn.textContent = State.csStep === 3 ? (State.editingSpotId ? 'Save Changes 💾' : 'Create ✨') : 'Next →';
-  } else { badge.textContent = ''; fill.style.width = '100%'; footer.style.display = 'none'; }
+  const step = document.querySelector(`.cs-step[data-step="${State.csStep}"]`); if (step) step.classList.add('active');
+  const badge = document.getElementById('csStepBadge'); const fill = document.getElementById('csProgressFill'); const footer = document.getElementById('csFooter'); const nextBtn = document.getElementById('csNextBtn'); const backBtn = document.getElementById('csBackBtn'); const titleEl = document.getElementById('csScreenTitle');
+  if (State.csStep <= 3) { badge.textContent = State.csStep + '/3'; fill.style.width = (State.csStep * 33.33) + '%'; footer.style.display = 'flex'; backBtn.style.display = State.csStep > 1 ? 'flex' : 'none'; nextBtn.textContent = State.csStep === 3 ? (State.editingSpotId ? 'Save Changes 💾' : 'Create ✨') : 'Next →'; }
+  else { badge.textContent = ''; fill.style.width = '100%'; footer.style.display = 'none'; }
   if (titleEl) titleEl.textContent = State.editingSpotId ? 'Edit Your Spot' : 'Create Your Spot';
   if (State.csStep === 3) renderCsCatPicker();
 }
 
 function csNext() {
   if (State.csStep === 1) { const name = document.getElementById('csSpotName').value.trim(); if (name.length < 5) { toast('Spot name too short'); return; } }
-  if (State.csStep === 2) {
-    const what = document.getElementById('csWhat').value.trim();
-    const why = document.getElementById('csWhy').value.trim();
-    if (what.length < 10) { toast('Hook too short'); return; }
-    if (why.length < 20) { toast('Twist too short'); return; }
-  }
-  if (State.csStep === 3) {
-    const l1 = document.getElementById('csLayer1').value.trim(); 
-    const l2 = document.getElementById('csLayer2').value.trim();
-    const l3 = document.getElementById('csLayer3').value.trim(); 
-    const l4 = document.getElementById('csLayer4').value.trim();
-    if (!l1 || !l2 || !l3 || !l4) { toast('Fill all 4 layers'); return; }
-    if (!State.csCategory) { toast('Pick a category'); return; }
-    submitCreateSpot(); return;
-  }
+  if (State.csStep === 2) { const what = document.getElementById('csWhat').value.trim(); const why = document.getElementById('csWhy').value.trim(); if (what.length < 10) { toast('Hook too short'); return; } if (why.length < 20) { toast('Twist too short'); return; } }
+  if (State.csStep === 3) { const l1 = document.getElementById('csLayer1').value.trim(); const l2 = document.getElementById('csLayer2').value.trim(); const l3 = document.getElementById('csLayer3').value.trim(); const l4 = document.getElementById('csLayer4').value.trim(); if (!l1 || !l2 || !l3 || !l4) { toast('Fill all 4 layers'); return; } if (!State.csCategory) { toast('Pick a category'); return; } submitCreateSpot(); return; }
   State.csStep++; renderCsStep();
 }
 function csBack() { if (State.csStep > 1) { State.csStep--; renderCsStep(); } }
 
-function renderCsCatPicker() {
-  const grid = document.getElementById('csCatGrid');
-  grid.innerHTML = CATEGORIES.map(c => `<div class="cs-cat-btn ${State.csCategory === c.id ? 'selected' : ''}" onclick="pickCsCat('${c.id}')"><div class="cs-cat-emoji">${c.emoji}</div><div class="cs-cat-name">${c.name}</div></div>`).join('');
-}
+function renderCsCatPicker() { const grid = document.getElementById('csCatGrid'); grid.innerHTML = CATEGORIES.map(c => `<div class="cs-cat-btn ${State.csCategory === c.id ? 'selected' : ''}" onclick="pickCsCat('${c.id}')"><div class="cs-cat-emoji">${c.emoji}</div><div class="cs-cat-name">${c.name}</div></div>`).join(''); }
 function pickCsCat(id) { State.csCategory = id; renderCsCatPicker(); haptic(15); }
 
 async function submitCreateSpot() {
-  const spotName = document.getElementById('csSpotName').value.trim();
-  const what = document.getElementById('csWhat').value.trim(); const why = document.getElementById('csWhy').value.trim();
-  const l1 = document.getElementById('csLayer1').value.trim(); const l2 = document.getElementById('csLayer2').value.trim();
-  const l3 = document.getElementById('csLayer3').value.trim(); const l4 = document.getElementById('csLayer4').value.trim();
-  const funny = document.getElementById('csFunny').value.trim(); const author = document.getElementById('csAuthor').value.trim();
+  const spotName = document.getElementById('csSpotName').value.trim(); const what = document.getElementById('csWhat').value.trim(); const why = document.getElementById('csWhy').value.trim();
+  const l1 = document.getElementById('csLayer1').value.trim(); const l2 = document.getElementById('csLayer2').value.trim(); const l3 = document.getElementById('csLayer3').value.trim(); const l4 = document.getElementById('csLayer4').value.trim(); const funny = document.getElementById('csFunny').value.trim(); const author = document.getElementById('csAuthor').value.trim();
   State.csStep = 5; renderCsStep();
-  const layers = [
-    { icon: "🔍", title: "The Secret Truth", body: l1 },
-    { icon: "🧠", title: "The Secret Reason", body: l2 },
-    { icon: "⚠️", title: "The Secret Consequences", body: l3 },
-    { icon: "✅", title: "The Secret Solution", body: l4 }
-  ];
+  const layers = [{ icon: "🔍", title: "The Secret Truth", body: l1 }, { icon: "🧠", title: "The Secret Reason", body: l2 }, { icon: "⚠️", title: "The Secret Consequences", body: l3 }, { icon: "✅", title: "The Secret Solution", body: l4 }];
   try {
     let data;
-    if (State.editingSpotId) {
-      const { error } = await sb.from('user_spots').update({ spot_name: spotName, what: what, why: why, layers: layers, funny: funny || null, category: State.csCategory, author_name: author || null, updated_at: new Date().toISOString() }).eq('id', State.editingSpotId).eq('user_id', State.userId);
-      if (error) { document.getElementById('csErrorReason').textContent = error.message || 'Update failed.'; State.csStep = 7; renderCsStep(); return; }
-      data = { approved: true };
-    } else {
-      const res = await fetch(CONFIG.CREATE_SPOT_URL, { method: 'POST', headers: { 'Authorization': 'Bearer ' + CONFIG.SUPABASE_KEY, 'Content-Type': 'application/json' }, body: JSON.stringify({ user_id: State.userId, author_name: author || null, spot_name: spotName, hook_style: 'Custom', what: what, why: why, layers: layers, funny: funny || null, category: State.csCategory, is_daily_locked: false }) });
-      data = await res.json();
-    }
+    if (State.editingSpotId) { const { error } = await sb.from('user_spots').update({ spot_name: spotName, what: what, why: why, layers: layers, funny: funny || null, category: State.csCategory, author_name: author || null, updated_at: new Date().toISOString() }).eq('id', State.editingSpotId).eq('user_id', State.userId); if (error) { document.getElementById('csErrorReason').textContent = error.message || 'Update failed.'; State.csStep = 7; renderCsStep(); return; } data = { approved: true }; }
+    else { const res = await fetch(CONFIG.CREATE_SPOT_URL, { method: 'POST', headers: { 'Authorization': 'Bearer ' + CONFIG.SUPABASE_KEY, 'Content-Type': 'application/json' }, body: JSON.stringify({ user_id: State.userId, author_name: author || null, spot_name: spotName, hook_style: 'Custom', what: what, why: why, layers: layers, funny: funny || null, category: State.csCategory, is_daily_locked: false }) }); data = await res.json(); }
     if (data.approved) {
       const isEdit = !!State.editingSpotId;
       document.querySelector('#createSpot .cs-success-title').textContent = isEdit ? 'Spot updated! ✏️' : 'Your spot is live!';
       document.querySelector('#createSpot .cs-success-sub').textContent = isEdit ? 'Your changes are live.' : 'People will discover it in the feed.';
-      const successBtn = document.querySelector('#createSpot .cs-success-wrap button');
-      if (successBtn) successBtn.textContent = isEdit ? 'Back to My Spots' : 'Back to Feed';
+      const successBtn = document.querySelector('#createSpot .cs-success-wrap button'); if (successBtn) successBtn.textContent = isEdit ? 'Back to My Spots' : 'Back to Feed';
       document.getElementById('csSuccessCard').innerHTML = `<div class="saved-cat">${CATEGORIES.find(c => c.id === State.csCategory)?.emoji || '💡'} ${State.csCategory.toUpperCase().replace('_',' ')}</div><div class="saved-title-text">${what}</div>${author ? `<div class="saved-date">Discovered by ${author}</div>` : ''}`;
       State.csStep = 6;
-    } else {
-      document.getElementById('csErrorReason').textContent = data.reason || data.error || 'Something went wrong. Please try again.';
-      State.csStep = 7;
-    }
+    } else { document.getElementById('csErrorReason').textContent = data.reason || data.error || 'Something went wrong. Please try again.'; State.csStep = 7; }
     renderCsStep();
-  } catch (err) {
-    document.getElementById('csErrorReason').textContent = 'We couldn\'t process your spot right now. Please check your connection and try again.';
-    State.csStep = 7; renderCsStep();
-  }
+  } catch (err) { document.getElementById('csErrorReason').textContent = 'We couldn\'t process your spot right now. Please check your connection and try again.'; State.csStep = 7; renderCsStep(); }
 }
 
 function finishCreateSpot() {
-  const wasEdit = !!State.editingSpotId;
-  State.cards = [];
+  const wasEdit = !!State.editingSpotId; State.cards = [];
   ['csSpotName','csWhat','csWhy','csLayer1','csLayer2','csLayer3','csLayer4','csFunny','csAuthor'].forEach(id => { const el = document.getElementById(id); if (el) el.value = ''; });
   State.editingSpotId = null; State.editingSpotData = null;
   if (wasEdit) { switchTab('mySpots'); } else { switchTab('feed'); loadFeed(); }
@@ -2062,37 +1364,22 @@ function wireEvents() {
     localStorage.setItem('bs_cats', JSON.stringify(State.pickedCats)); haptic(20);
     try { await sb.from('user_preferences').upsert({ user_id: State.userId, categories: State.pickedCats, gender: State.gender }); } catch (err) {}
     fetch(CONFIG.GENERATE_URL, { method: 'POST', headers: { 'Authorization': 'Bearer ' + CONFIG.SUPABASE_KEY, 'Content-Type': 'application/json' }, body: JSON.stringify({ user_id: State.userId, count: 10 }) }).catch(e => {});
-    document.getElementById('bottomNav').classList.remove('hidden'); 
-    go('feed'); loadFeed(); startHeartbeat();
+    document.getElementById('bottomNav').classList.remove('hidden'); go('feed'); loadFeed(); startHeartbeat();
   };
   document.getElementById('catSkipBtn').onclick = async () => {
-    haptic(20); State.pickedCats = ['all'];
-    localStorage.setItem('bs_cats', JSON.stringify(['all']));
+    haptic(20); State.pickedCats = ['all']; localStorage.setItem('bs_cats', JSON.stringify(['all']));
     try { await sb.from('user_preferences').upsert({ user_id: State.userId, categories: ['all'], gender: State.gender }); } catch (err) {}
     fetch(CONFIG.GENERATE_URL, { method: 'POST', headers: { 'Authorization': 'Bearer ' + CONFIG.SUPABASE_KEY, 'Content-Type': 'application/json' }, body: JSON.stringify({ user_id: State.userId, count: 15 }) }).catch(e => {});
-    toast('👁 Showing all categories');
-    document.getElementById('bottomNav').classList.remove('hidden'); 
-    go('feed'); loadFeed(); startHeartbeat();
+    toast('👁 Showing all categories'); document.getElementById('bottomNav').classList.remove('hidden'); go('feed'); loadFeed(); startHeartbeat();
   };
   document.querySelectorAll('.nav-item').forEach(item => { item.onclick = () => switchTab(item.dataset.tab); });
-  const searchInput = document.getElementById('searchInput');
-  if (searchInput) searchInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') doSearch(e.target.value); });
+  const searchInput = document.getElementById('searchInput'); if (searchInput) searchInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') doSearch(e.target.value); });
   document.querySelectorAll('.trend-tag').forEach(tag => { tag.onclick = () => doSearch(tag.dataset.q); });
   document.getElementById('modalClose').onclick = closeModal;
   document.getElementById('shareCancel').onclick = closeShare;
   document.querySelectorAll('.share-opt').forEach(opt => { opt.onclick = () => shareTo(opt.dataset.platform); });
   document.getElementById('adWatchBtn').onclick = playAd;
-  
-  document.getElementById('adCancelBtn').onclick = () => { 
-    document.getElementById('adPopup').classList.remove('active'); 
-    const btn = document.getElementById('adWatchBtn');
-    if (btn) { btn.disabled = false; btn.textContent = '▶ Watch Video'; }
-    if (State._pendingViolenceUnlock) {
-      State._pendingViolenceUnlock = null;
-      State._pendingViolenceLayer = null;
-    }
-  };
-  
+  document.getElementById('adCancelBtn').onclick = () => { document.getElementById('adPopup').classList.remove('active'); const btn = document.getElementById('adWatchBtn'); if (btn) { btn.disabled = false; btn.textContent = '▶ Watch Video'; } if (State._pendingViolenceUnlock) { State._pendingViolenceUnlock = null; State._pendingViolenceLayer = null; } };
   document.getElementById('rowInterests').onclick = () => { go('categories'); renderCategories(); };
   document.getElementById('rowBulk').onclick = () => { go('bulkPaste'); };
   document.getElementById('rowViolenceBulk').onclick = () => { go('violencePaste'); };
@@ -2109,36 +1396,15 @@ function wireEvents() {
   document.getElementById('selectModeToggle').onclick = toggleSelectMode;
   document.getElementById('selectCancelBtn').onclick = toggleSelectMode;
   document.getElementById('selectDeleteBtn').onclick = openBatchDeleteConfirm;
-  
-  const csName = document.getElementById('csSpotName');
-  if (csName) csName.addEventListener('input', e => document.getElementById('csNameCount').textContent = e.target.value.length);
-  const csWhat = document.getElementById('csWhat');
-  if (csWhat) csWhat.addEventListener('input', e => document.getElementById('csWhatCount').textContent = e.target.value.length);
-  const csWhy = document.getElementById('csWhy');
-  if (csWhy) csWhy.addEventListener('input', e => document.getElementById('csWhyCount').textContent = e.target.value.length);
-  
+  const csName = document.getElementById('csSpotName'); if (csName) csName.addEventListener('input', e => document.getElementById('csNameCount').textContent = e.target.value.length);
+  const csWhat = document.getElementById('csWhat'); if (csWhat) csWhat.addEventListener('input', e => document.getElementById('csWhatCount').textContent = e.target.value.length);
+  const csWhy = document.getElementById('csWhy'); if (csWhy) csWhy.addEventListener('input', e => document.getElementById('csWhyCount').textContent = e.target.value.length);
   let versionTapCount = 0; let versionTapTimer = null;
   const appVersion = document.getElementById('appVersion');
   if (appVersion) {
-    appVersion.onclick = () => {
-      versionTapCount++; haptic(15);
-      clearTimeout(versionTapTimer);
-      versionTapTimer = setTimeout(() => { versionTapCount = 0; }, 2000);
-      if (versionTapCount === 3) { toast('One more tap...'); }
-      if (versionTapCount >= 4) { 
-        versionTapCount = 0; 
-        localStorage.setItem('bs_bulk_unlocked', 'true'); 
-        document.getElementById('rowBulk').style.display = 'flex'; 
-        document.getElementById('rowViolenceBulk').style.display = 'flex';
-        toast('🔓 Bulk Pastes unlocked!'); 
-        haptic(80); 
-      }
-    };
+    appVersion.onclick = () => { versionTapCount++; haptic(15); clearTimeout(versionTapTimer); versionTapTimer = setTimeout(() => { versionTapCount = 0; }, 2000); if (versionTapCount === 3) { toast('One more tap...'); } if (versionTapCount >= 4) { versionTapCount = 0; localStorage.setItem('bs_bulk_unlocked', 'true'); document.getElementById('rowBulk').style.display = 'flex'; document.getElementById('rowViolenceBulk').style.display = 'flex'; toast('🔓 Bulk Pastes unlocked!'); haptic(80); } };
   }
-  if (localStorage.getItem('bs_bulk_unlocked') === 'true') { 
-    document.getElementById('rowBulk').style.display = 'flex'; 
-    document.getElementById('rowViolenceBulk').style.display = 'flex'; 
-  }
+  if (localStorage.getItem('bs_bulk_unlocked') === 'true') { document.getElementById('rowBulk').style.display = 'flex'; document.getElementById('rowViolenceBulk').style.display = 'flex'; }
 }
 
 let toastTimer;
@@ -2147,69 +1413,41 @@ function toast(msg) { const el = document.getElementById('toast'); el.textConten
 function formatTime(iso) {
   if (!iso) return '';
   const d = new Date(iso); const now = new Date(); const diff = (now - d) / 1000;
-  if (diff < 60) return 'now';
-  if (diff < 3600) return Math.floor(diff / 60) + 'm ago';
-  if (diff < 86400) return Math.floor(diff / 3600) + 'h ago';
+  if (diff < 60) return 'now'; if (diff < 3600) return Math.floor(diff / 60) + 'm ago'; if (diff < 86400) return Math.floor(diff / 3600) + 'h ago';
   return d.toLocaleDateString();
 }
 
 function haptic(ms) { if (navigator.vibrate) navigator.vibrate(ms); }
 
-// ============ PWA INSTALL LOGIC (SHOWS AFTER FEED) ============
 let deferredPrompt;
 
 if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('./sw.js').catch(err => console.log('SW registration failed:', err));
-  });
+  window.addEventListener('load', () => { navigator.serviceWorker.register('./sw.js').catch(err => console.log('SW registration failed:', err)); });
 }
 
-window.addEventListener('beforeinstallprompt', (e) => {
-  e.preventDefault();
-  deferredPrompt = e;
-});
+window.addEventListener('beforeinstallprompt', (e) => { e.preventDefault(); deferredPrompt = e; });
 
 function showInstallPopup() {
   const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
   const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
-  
   if (isStandalone) return;
-  
   if (!localStorage.getItem('bs_install_prompted')) {
     document.getElementById('installModal').classList.add('active');
     localStorage.setItem('bs_install_prompted', 'true');
-
-    if (isIOS) {
-      document.getElementById('installText').innerHTML = "Add Blindspot to your home screen for the full app experience.<br><br><span style='color: var(--purple-hi); font-weight: bold;'>Tap the Share button below, then tap 'Add to Home Screen'.</span>";
-      document.getElementById('installBtn').textContent = "Got it";
-    } else {
-      document.getElementById('installText').innerHTML = "Add Blindspot to your home screen for the full app experience.";
-      document.getElementById('installBtn').textContent = "Install App";
-    }
+    if (isIOS) { document.getElementById('installText').innerHTML = "Add Blindspot to your home screen for the full app experience.<br><br><span style='color: var(--purple-hi); font-weight: bold;'>Tap the Share button below, then tap 'Add to Home Screen'.</span>"; document.getElementById('installBtn').textContent = "Got it"; }
+    else { document.getElementById('installText').innerHTML = "Add Blindspot to your home screen for the full app experience."; document.getElementById('installBtn').textContent = "Install App"; }
   }
 }
 
 document.getElementById('installBtn').addEventListener('click', async () => {
   const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-  
-  if (isIOS) {
-    document.getElementById('installModal').classList.remove('active');
-    return;
-  }
-
-  if (deferredPrompt) {
-    deferredPrompt.prompt();
-    const { outcome } = await deferredPrompt.userChoice;
-    deferredPrompt = null;
-    document.getElementById('installModal').classList.remove('active');
-  } else {
-    toast('Tap the 3 dots (⋮) at the top right, then tap "Add to Home screen"');
-    document.getElementById('installModal').classList.remove('active');
-  }
+  if (isIOS) { document.getElementById('installModal').classList.remove('active'); return; }
+  if (deferredPrompt) { deferredPrompt.prompt(); const { outcome } = await deferredPrompt.userChoice; deferredPrompt = null; document.getElementById('installModal').classList.remove('active'); }
+  else { toast('Tap the 3 dots (⋮) at the top right, then tap "Add to Home screen"'); document.getElementById('installModal').classList.remove('active'); }
 });
 
 document.addEventListener('DOMContentLoaded', init);
 </script>
 
 </body>
- </html>
+                                                                                  </html>
