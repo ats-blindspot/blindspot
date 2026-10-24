@@ -1088,6 +1088,7 @@ async function fetchCardFromBackend() {
   }
   if (data.error) throw new Error(data.error);
   if (!data.id) throw new Error('No card received');
+  
   return {
     id: data.id, cat: data.category, emoji: data.emoji, what: data.what, why: data.why,
     layers: data.layers, funny: data.funny, author_name: data.author_name || null,
