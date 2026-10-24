@@ -877,8 +877,6 @@ async function openLayer(cardId, layerIdx) {
       });
       const data = await res.json();
 
-      alert("BACKEND TALK: " + JSON.stringify(data)); // <--- PROBE ADDED HERE
-
       if (data.status === 'locked') {
         showMelPopup(data.unlock_at);
         return;
@@ -1451,4 +1449,4 @@ document.addEventListener('DOMContentLoaded', init);
 </script>
 
 </body>
- </html>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </html>
