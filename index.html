@@ -126,7 +126,6 @@
   .feed-bookmark.saved { color: var(--purple-hi); filter: drop-shadow(0 0 12px var(--purple-hi)); }
   .feed-content-box { background: linear-gradient(180deg, rgba(157,78,221,0.08) 0%, rgba(157,78,221,0.02) 100%); border: 1px solid rgba(157,78,221,0.25); border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 12px; position: relative; z-index: 2; flex-shrink: 0; }
   
-  /* UPDATED TEXT SIZES */
   .feed-what { font-size: 22px; font-weight: 900; line-height: 1.35; letter-spacing: 0.2px; text-shadow: 0 0 20px rgba(199,125,255,0.2); color: #fff; }
   .feed-why { font-size: 15px; color: #D0D0D0; font-weight: 600; line-height: 1.6; }
 
@@ -878,6 +877,8 @@ async function openLayer(cardId, layerIdx) {
       });
       const data = await res.json();
 
+      alert("BACKEND TALK: " + JSON.stringify(data)); // <--- PROBE ADDED HERE
+
       if (data.status === 'locked') {
         showMelPopup(data.unlock_at);
         return;
@@ -1450,4 +1451,4 @@ document.addEventListener('DOMContentLoaded', init);
 </script>
 
 </body>
-                                                                                  </html>
+ </html>
